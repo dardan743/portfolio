@@ -2,17 +2,19 @@ import { useEffect } from "react";
 import Aos from "aos";
 import { HERO, CONTACT, SERVICES, SKILLS, PORTFOLIO, WORK } from "sections";
 import { Header, Footer } from "components";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init();
   }, []);
 
   return (
     <>
-      <Header />
+      <Header t={t} />
       <main>
-        <HERO />
+        <HERO t={t} />
         <SKILLS />
         <SERVICES />
         <WORK />

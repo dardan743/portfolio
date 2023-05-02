@@ -1,8 +1,10 @@
 import portfolioImg01 from "../images/portfolio-01.jpg";
 import MovieX from "../images/portfolio/moviex.png";
 import Pizza from "../images/portfolio/pizza.png";
+import albania from "assets/flags/al.png";
+import en from "assets/flags/uk.jpg";
 
-const portfolios = [
+export const projects = [
   {
     id: "1",
     imgUrl: MovieX,
@@ -41,4 +43,17 @@ const portfolios = [
   },
 ];
 
-export default portfolios;
+export const languages = [
+  {
+    id: "en",
+    title: "EN",
+    country: "English",
+    flag: en,
+  },
+  {
+    id: "sq",
+    title: "SQ",
+    country: "Albanian",
+    flag: albania,
+  },
+];

@@ -1,10 +1,19 @@
 import React, { useRef, useEffect } from "react";
 import { Player } from "components";
 import Song from "assets/song.mp3";
+import i18next from "i18next";
+import { languages } from "assets/data/data";
 
-const Header = () => {
+const Header = ({ t }) => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
+
+  const changeLanguage = (e) => {
+    i18next.changeLanguage(e.target.value);
+  };
+
+  const selected = localStorage.getItem("i18nextLng");
+  const currentLanguage = languages.find((lng) => lng?.id === selected);
 
   const stickyHeaderFunc = () => {
     window.addEventListener("scroll", () => {
@@ -70,7 +79,7 @@ const Header = () => {
                   className="text-smallTextColor font-[600]"
                   href="#about"
                 >
-                  About
+                  {t("about")}
                 </a>
               </li>
               <li>
@@ -79,7 +88,7 @@ const Header = () => {
                   className="text-smallTextColor font-[600]"
                   href="#services"
                 >
-                  Services
+                  {t("services")}
                 </a>
               </li>
               <li>
@@ -88,7 +97,7 @@ const Header = () => {
                   className="text-smallTextColor font-[600]"
                   href="#portfolio"
                 >
-                  Portfolio
+                  {t("portfolio")}
                 </a>
               </li>
               <li>
@@ -97,7 +106,7 @@ const Header = () => {
                   className="text-smallTextColor font-[600]"
                   href="#contact"
                 >
-                  Contact
+                  {t("contact")}
                 </a>
               </li>
             </ul>
@@ -107,6 +116,21 @@ const Header = () => {
           {/* ========= menu right ========== */}
           <div className="flex items-center gap-4">
             <Player url={Song} />
+
+            <select
+              name="selectbox"
+              className="text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-1 rounded-[8px] hover:bg-smallTextColor hover:text-white hover:font-[600] ease-in duration-300"
+              onChange={(e) => changeLanguage(e)}
+            >
+              {languages.map((lang) => (
+                <option
+                  selected={currentLanguage?.id === lang?.id}
+                  value={lang?.id}
+                >
+                  {lang?.country}
+                </option>
+              ))}
+            </select>
 
             {/* <a
               onClick={handleClick}

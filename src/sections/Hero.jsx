@@ -3,7 +3,7 @@ import heroImg from "assets/images/dardan.png";
 import resume from "assets/cv.pdf";
 import CountUp from "react-countup";
 
-const Hero = () => {
+const Hero = ({ t }) => {
   return (
     <section className="pt-0" id="about">
       <div className="container pt-14">
@@ -15,7 +15,7 @@ const Hero = () => {
               data-aos-duration="1500"
               className="text-headingColor font-[600] text-[16px]"
             >
-              Hello welcome
+              {t("hello")} {t("welcome")},
             </h5>
             <h1
               data-aos="fade-up"
@@ -23,7 +23,7 @@ const Hero = () => {
               className="text-headingColor font-[800] text-[1.8rem] sm:text-[40px] leading-[35px] sm:leading-[46px] mt-5 "
             >
               I'm Dardan Llapashtica <br />
-              Software Developer
+              {t("dev")}
             </h1>
 
             <div
@@ -34,22 +34,16 @@ const Hero = () => {
             >
               <a href="#contact">
                 <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">
-                  <i class="ri-mail-line"></i> Hire me
+                  <i class="ri-mail-line"></i> {t("hire")}
                 </button>
               </a>
-              {/* <a
-                href="#portfolio"
-                className="text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor"
-              >
-                See portfolio
-              </a> */}
               <a
                 href={resume}
                 target="_blank"
                 rel="noreferrer"
                 className="text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor"
               >
-                See portfolio
+                {t("see_cv")}
               </a>
             </div>
 
@@ -61,14 +55,12 @@ const Hero = () => {
               <span>
                 <i class="ri-apps-2-line"></i>
               </span>
-              I'm a Frontend developer interested in building reusable, useful,
-              wellconstructed components and applications. Interested in the
-              continuation of learning new technologies.
+              {t("about_me")}
             </p>
 
             <div className="flex items-center gap-9 mt-14">
               <span className="text-smallTextColor text-[15px] font-[600]">
-                Follow me:
+                {t("follow")}:
               </span>
               <span>
                 <a
@@ -127,7 +119,7 @@ const Hero = () => {
                 <CountUp start={0} end={3} duration={2} suffix="+" />
               </h2>
               <h4 className="text-headingColor font-[600] text-[18px]">
-                Years of Experience
+                {t("years")}:
               </h4>
             </div>
             <div className="mb-10">
@@ -135,7 +127,7 @@ const Hero = () => {
                 <CountUp start={0} end={99} duration={2} suffix="%" />
               </h2>
               <h4 className="text-headingColor font-[600] text-[18px]">
-                Success Rate
+                {t("success")}:
               </h4>
             </div>
             <div className="mb-10">
@@ -143,7 +135,7 @@ const Hero = () => {
                 <CountUp start={0} end={10} duration={2} suffix="+" />
               </h2>
               <h4 className="text-headingColor font-[600] text-[18px]">
-                Happy Clients
+                {t("happy_clients")}:
               </h4>
             </div>
             <div className="mb-10">
@@ -151,7 +143,7 @@ const Hero = () => {
                 <CountUp start={0} end={8} duration={2} suffix="+" />
               </h2>
               <h4 className="text-headingColor font-[600] text-[18px]">
-                Projects Completed
+                {t("completed")}:
               </h4>
             </div>
           </div>

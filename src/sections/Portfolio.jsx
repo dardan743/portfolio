@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import data from "assets/data/portfolioData";
+import { projects } from "assets/data/data";
 import { Modal } from "components";
 
 const Portfolio = () => {
   const [nextItems, setNextItems] = useState(6);
-  const [portfolios, setPortfolios] = useState(data);
+  const [portfolios, setPortfolios] = useState(projects);
   const [selectTab, setSelectTab] = useState("all");
   const [showModal, setShowModal] = useState(false);
   const [activeID, setActiveID] = useState(null);
@@ -20,16 +20,18 @@ const Portfolio = () => {
 
   useEffect(() => {
     if (selectTab === "all") {
-      setPortfolios(data);
+      setPortfolios(projects);
     }
 
     if (selectTab === "web-apps") {
-      const filteredData = data.filter((item) => item.category === "Web App");
+      const filteredData = projects.filter(
+        (item) => item.category === "Web App"
+      );
       setPortfolios(filteredData);
     }
 
     if (selectTab === "ux-design") {
-      const filteredData = data.filter((item) => item.category === "Ux");
+      const filteredData = projects.filter((item) => item.category === "Ux");
       setPortfolios(filteredData);
     }
   }, [selectTab]);
@@ -94,7 +96,7 @@ const Portfolio = () => {
         </div>
 
         <div className="text-center mt-6">
-          {nextItems < portfolios.length && data.length > 6 && (
+          {nextItems < portfolios.length && projects.length > 6 && (
             <button
               onClick={loadMoreHandler}
               className="text-white bg-primaryColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
