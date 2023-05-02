@@ -1,14 +1,7 @@
 import { useEffect } from "react";
 import Aos from "aos";
-import "./App.scss";
-
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/UI/Hero";
-import Skills from "./components/UI/Skills";
-import Services from "./components/UI/Services";
-import Portfolio from "./components/UI/Portfolio";
-import Contact from "./components/UI/Contact";
+import { HERO, CONTACT, SERVICES, SKILLS, PORTFOLIO, WORK } from "sections";
+import { Header, Footer } from "components";
 
 function App() {
   useEffect(() => {
@@ -19,11 +12,12 @@ function App() {
     <>
       <Header />
       <main>
-        <Hero />
-        <Services />
-        <Skills />
-        <Portfolio />
-        <Contact />
+        <HERO />
+        <SKILLS />
+        <SERVICES />
+        <WORK />
+        <PORTFOLIO />
+        <CONTACT />
       </main>
       <Footer />
     </>

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Snackbar from "components/custom/Snackbar";
+import { Snackbar } from "components";
 
 const Contact = () => {
   const form = useRef();

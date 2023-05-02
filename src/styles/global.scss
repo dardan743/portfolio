@@ -47,36 +47,6 @@ section {
   z-index: 99;
 }
 
-@media only screen and (max-width: 768px) {
-  .menu {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #00000084;
-    z-index: 100;
-    display: none;
-    ul {
-      width: 15rem;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 200;
-      background: #fff;
-      flex-direction: column;
-      line-height: 30px;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
-  .show__menu {
-    display: block;
-  }
-}
-
 .services_items {
   .item {
     width: 27.5%;
@@ -115,6 +85,42 @@ section {
     h6 {
       width: 72%;
       margin: 20px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #00000084;
+    z-index: 100;
+    display: none;
+    ul {
+      width: 15rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 200;
+      background: #fff;
+      flex-direction: column;
+      line-height: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .show__menu {
+    display: block;
+  }
+
+  .services_items {
+    .item {
+      width: 100%;
     }
   }
 }

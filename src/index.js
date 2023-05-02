@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./styles/tailwind.css";
+import "./styles/global.scss";
 import App from "./App";
-
 import "aos/dist/aos.css";
 import "remixicon/fonts/remixicon.css";
 

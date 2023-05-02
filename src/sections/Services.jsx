@@ -36,7 +36,7 @@ const Services = () => {
             What do i do?
           </p>
         </div>
-        <div className="services_items flex items-center justify-between flex-wrap sm:py-12">
+        <div className="services_items flex items-center justify-between flex-wrap sm:py-12 ">
           {data?.map((props, i) => {
             return (
               <div

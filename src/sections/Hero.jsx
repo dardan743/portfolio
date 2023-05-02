@@ -1,6 +1,6 @@
 import React from "react";
-import heroImg from "../../assets/images/dardan.png";
-import resume from "../../assets/cv.pdf";
+import heroImg from "assets/images/dardan.png";
+import resume from "assets/cv.pdf";
 import CountUp from "react-countup";
 
 const Hero = () => {

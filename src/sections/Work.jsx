@@ -1,9 +1,9 @@
 import React from "react";
-import frontendImg from "../../assets/images/front-end.png";
-import backendImg from "../../assets/images/backend.png";
-import uiImg from "../../assets/images/design.png";
-import appsImg from "../../assets/images/apps.png";
-import mobileImg from "../../assets/images/mobile.png";
+import frontendImg from "assets/images/front-end.png";
+import backendImg from "assets/images/backend.png";
+import uiImg from "assets/images/design.png";
+import appsImg from "assets/images/apps.png";
+import mobileImg from "assets/images/mobile.png";
 import { FcApproval } from "react-icons/fc";
 
 const data = [
@@ -205,16 +205,16 @@ const Right = ({ img, skillName, skills }) => (
   </div>
 );
 
-const Skills = () => {
+const Work = () => {
   return (
     <section id="services">
       <div className="container lg:pt-5">
         <div className="text-center">
           <h2 className="text-headingColor font-[800] text-[2.4rem] mb-5">
-            Skills
+            Work Experience
           </h2>
           <p className="lg:max-w-[600px] lg:mx-auto text-headingColor font-[500] text-[16px] leading-7 ">
-            My Programming Language Proficiency!
+            My work experience througout the years!
           </p>
         </div>
 
@@ -223,7 +223,7 @@ const Skills = () => {
             <div className="relative text-gray-700 antialiased text-sm font-semibold">
               {/* =========== vertical line running through the middle ============ */}
               <div className="hidden absolute w-1 sm:block bg-headingColor h-full left-1/2 transform -translate-x-1/2"></div>
-              {data?.map((item) =>
+              {/* {data?.map((item) =>
                 item.type === "left" ? (
                   <Left
                     skillName={item.title}
@@ -237,7 +237,7 @@ const Skills = () => {
                     img={item.img}
                   />
                 ) : null
-              )}
+              )} */}
             </div>
           </div>
         </div>
@@ -246,4 +246,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Work;
