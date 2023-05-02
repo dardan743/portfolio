@@ -4,6 +4,7 @@
 - Add Themes
 - Add Work Experience
 - Add Certificates
+- Add Testimonials
 - Add Projects
 - Update Footer Text
 - Change Song
