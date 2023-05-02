@@ -2,7 +2,7 @@
 
 - Add Multi Language = DONE
 - Add Themes
-- Select Color Change CSS ::selection
+- Select Color Change CSS ::selection = DONE
 - Add Work Experience
 - Add Certificates
 - Add Testimonials

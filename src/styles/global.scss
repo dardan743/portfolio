@@ -18,10 +18,31 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   font-family: "Urbanist", sans-serif;
+  iframe {
+    z-index: -2 !important;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #ff4141;
+  border-radius: 10px;
+}
+
+*::selection {
+  color: white;
+  background-color: #ff4141;
+}
+
+*:focus {
+  outline: none;
 }
 
 .container {
