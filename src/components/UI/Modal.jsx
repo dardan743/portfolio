@@ -2,7 +2,7 @@ import React from "react";
 import portfolios from "../../assets/data/portfolioData";
 
 const Modal = ({ activeID, setShowModal }) => {
-  const portfolio = portfolios.find(portfolio => portfolio.id === activeID);
+  const portfolio = portfolios.find((portfolio) => portfolio.id === activeID);
 
   return (
     <div className="w-full h-full fixed top-0 left-0 z-10 bg-headingColor bg-opacity-40">
@@ -37,7 +37,7 @@ const Modal = ({ activeID, setShowModal }) => {
             ))}
           </div>
 
-          <a href={portfolio.siteUrl}>
+          <a href={portfolio.siteUrl} target="_blank" rel="noreferrer">
             <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300">
               Live Site
             </button>

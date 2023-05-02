@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Aos from "aos";
-import "./App.css";
+import "./App.scss";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";

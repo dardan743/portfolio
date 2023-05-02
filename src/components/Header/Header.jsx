@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from "react";
+import Player from "../UI/Player";
+import Song from "assets/song.mp3";
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -104,6 +106,8 @@ const Header = () => {
 
           {/* ========= menu right ========== */}
           <div className="flex items-center gap-4">
+            <Player url={Song} />
+
             <a
               onClick={handleClick}
               href="#contact"
