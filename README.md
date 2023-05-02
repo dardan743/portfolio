@@ -2,6 +2,7 @@
 
 - Add Multi Language
 - Add Themes
+- Select Color Change CSS ::selection
 - Add Work Experience
 - Add Certificates
 - Add Testimonials
