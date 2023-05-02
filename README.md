@@ -8,3 +8,4 @@
 - Update Footer Text
 - Change Song
 - Create New PDF Resume
+- Update Section IDs
