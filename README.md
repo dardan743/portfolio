@@ -11,3 +11,4 @@
 - Change Song
 - Create New PDF Resume
 - Update Section IDs
+- Tab Change Active Color
