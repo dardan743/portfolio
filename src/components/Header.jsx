@@ -118,6 +118,15 @@ const Header = ({ t }) => {
                 <a
                   onClick={handleClick}
                   className="text-smallTextColor font-[600]"
+                  href="#testimonials"
+                >
+                  {t("testimonials")}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={handleClick}
+                  className="text-smallTextColor font-[600]"
                   href="#contact"
                 >
                   {t("contact")}

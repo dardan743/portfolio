@@ -26,6 +26,7 @@ function useThemeSwitcher() {
       localStorage.setItem("mode", "dark");
     } else {
       document.body.classList.remove("dark-mode");
+      document.body.classList.remove("purple-mode");
       localStorage.setItem("mode", "light");
     }
   }, [mode]);

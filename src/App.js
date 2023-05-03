@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 import Aos from "aos";
-import { HERO, CONTACT, SERVICES, SKILLS, PORTFOLIO, WORK } from "sections";
+import {
+  HERO,
+  CONTACT,
+  SERVICES,
+  SKILLS,
+  PORTFOLIO,
+  WORK,
+  TESTIMONIALS,
+} from "sections";
 import { Header, Footer } from "components";
 import { useTranslation } from "react-i18next";
 
@@ -19,6 +27,7 @@ function App() {
         <SERVICES />
         <WORK />
         <PORTFOLIO />
+        <TESTIMONIALS />
         <CONTACT />
       </main>
       <Footer />

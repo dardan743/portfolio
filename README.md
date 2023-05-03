@@ -1,8 +1,11 @@
 # PORTFOLIO
 
-- Add Multi Language = DONE
-- Select Color Change CSS ::selection = DONE
-- Add Themes = DONE
+# Add Multi Language = DONE
+
+# Select Color Change CSS ::selection = DONE
+
+# Add Themes = DONE
+
 - Add Work Experience
 - Add Certificates
 - Add Testimonials
