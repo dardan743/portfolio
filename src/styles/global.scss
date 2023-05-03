@@ -111,6 +111,18 @@ section {
   }
 }
 
+.react-multi-carousel-dot-list {
+  bottom: 15px !important;
+}
+
+.react-multi-carousel-dot button {
+  transition: 0.5s;
+  border-color: #ff4141 !important;
+}
+.react-multi-carousel-dot--active {
+  color: #081e21 !important;
+}
+
 @media only screen and (max-width: 768px) {
   .menu {
     width: 100%;

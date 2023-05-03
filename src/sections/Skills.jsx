@@ -219,7 +219,8 @@ const Skills = () => {
         </div>
 
         <div className="flex flex-col justify-center sm:py-12">
-          <div className="w-full py-3 px-2 sm:max-w-xl sm:mx-auto sm:px-0">
+          {/* sm:max-w-xl - for smaller box */}
+          <div className="w-full py-3 px-2 sm:mx-auto sm:px-0">
             <div className="relative text-gray-700 antialiased text-sm font-semibold">
               {/* =========== vertical line running through the middle ============ */}
               <div className="hidden absolute w-1 sm:block bg-headingColor h-full left-1/2 transform -translate-x-1/2"></div>

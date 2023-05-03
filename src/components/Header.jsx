@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Player } from "components";
-import Song from "assets/song.mp3";
+import Song from "assets/amors.mp3";
 import i18next from "i18next";
 import { languages } from "assets/data/data";
 

@@ -21,9 +21,7 @@ const Footer = () => {
 
           <div className="w-full sm:w-1/2">
             <p className="text-gray-300 leading-7 mt-4 sm:mt-0">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-              autem! Illo voluptates totam omnis maiores inventore vero eveniet
-              molestias rerum.
+              Created with ❤️ by Dardan Llapashtica
             </p>
 
             <div className="flex items-center gap-4 flex-wrap md:gap-8 mt-10">

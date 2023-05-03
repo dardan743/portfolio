@@ -30,6 +30,13 @@ const Portfolio = () => {
       setPortfolios(filteredData);
     }
 
+    if (selectTab === "mobile-apps") {
+      const filteredData = projects.filter(
+        (item) => item.category === "Mobile App"
+      );
+      setPortfolios(filteredData);
+    }
+
     if (selectTab === "ux-design") {
       const filteredData = projects.filter((item) => item.category === "Ux");
       setPortfolios(filteredData);
@@ -49,17 +56,43 @@ const Portfolio = () => {
           <div className="flex gap-3">
             <button
               onClick={() => setSelectTab("all")}
+              style={{
+                backgroundColor:
+                  selectTab === "all" ? "#193256" : "transparent",
+                color: selectTab === "all" ? "#FF4141" : "#193256",
+              }}
               className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
               All
             </button>
             <button
+              style={{
+                backgroundColor:
+                  selectTab === "web-apps" ? "#193256" : "transparent",
+                color: selectTab === "web-apps" ? "#FF4141" : "#193256",
+              }}
               onClick={() => setSelectTab("web-apps")}
               className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
               Web Apps
             </button>
             <button
+              style={{
+                backgroundColor:
+                  selectTab === "mobile-apps" ? "#193256" : "transparent",
+                color: selectTab === "mobile-apps" ? "#FF4141" : "#193256",
+              }}
+              onClick={() => setSelectTab("mobile-apps")}
+              className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
+            >
+              Mobile Apps
+            </button>
+            <button
+              style={{
+                backgroundColor:
+                  selectTab === "ux-design" ? "#193256" : "transparent",
+                color: selectTab === "ux-design" ? "#FF4141" : "#193256",
+              }}
               onClick={() => setSelectTab("ux-design")}
               className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
@@ -78,7 +111,7 @@ const Portfolio = () => {
               className="group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]"
             >
               <figure>
-                <img className="rounded-[8px]" src={portfolio.imgUrl} alt="" />
+                <img className="rounded-[8px]" src={portfolio.image} alt="" />
               </figure>
 
               <div className="w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block">

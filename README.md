@@ -1,17 +1,19 @@
 # PORTFOLIO
 
-# Add Multi Language = DONE
+# Done:
 
-# Select Color Change CSS ::selection = DONE
-
-# Add Themes = DONE
-
+- Add Multi Language
+- Select Color Change CSS
+- Add Themes
 - Add Work Experience
+- Update Footer Text
+- Update Section IDs
+- Change Song
+- Tab Change Active Color
+
+# To Do:
+
 - Add Certificates
 - Add Testimonials
 - Add Projects
-- Update Footer Text
-- Change Song
 - Create New PDF Resume
-- Update Section IDs
-- Tab Change Active Color
