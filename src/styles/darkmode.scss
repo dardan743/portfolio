@@ -1,0 +1,20 @@
+$primary_dark_color: #252525;
+$primary_text_color: #f3f3f3;
+$scrollbar-color: #ff4141;
+$secondary_dark_color: #292929;
+$border-c: #2e2e2e;
+
+body.dark-mode {
+  background: $primary_dark_color;
+  color: $primary_text_color;
+}
+
+body.dark-mode::-webkit-scrollbar {
+  width: 8px;
+  background-color: $primary_dark_color;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-color;
+  border-radius: 10px;
+}

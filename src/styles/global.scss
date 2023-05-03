@@ -23,6 +23,7 @@ html {
 
 body {
   font-family: "Urbanist", sans-serif;
+  overflow-x: hidden;
   iframe {
     z-index: -2 !important;
   }

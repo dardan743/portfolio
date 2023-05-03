@@ -7,13 +7,9 @@ import { languages } from "assets/data/data";
 const Header = ({ t }) => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
-
-  const changeLanguage = (e) => {
-    i18next.changeLanguage(e.target.value);
-  };
-
   const selected = localStorage.getItem("i18nextLng");
   const currentLanguage = languages.find((lng) => lng?.id === selected);
+  const changeLanguage = (e) => i18next.changeLanguage(e.target.value);
 
   const stickyHeaderFunc = () => {
     window.addEventListener("scroll", () => {
@@ -86,6 +82,15 @@ const Header = ({ t }) => {
                 <a
                   onClick={handleClick}
                   className="text-smallTextColor font-[600]"
+                  href="#skills"
+                >
+                  {t("skills")}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={handleClick}
+                  className="text-smallTextColor font-[600]"
                   href="#services"
                 >
                   {t("services")}
@@ -95,9 +100,18 @@ const Header = ({ t }) => {
                 <a
                   onClick={handleClick}
                   className="text-smallTextColor font-[600]"
+                  href="#work"
+                >
+                  {t("work")}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={handleClick}
+                  className="text-smallTextColor font-[600]"
                   href="#portfolio"
                 >
-                  {t("portfolio")}
+                  {t("projects")}
                 </a>
               </li>
               <li>
@@ -116,9 +130,7 @@ const Header = ({ t }) => {
           {/* ========= menu right ========== */}
           <div className="flex items-center gap-4">
             <Player url={Song} />
-
             <select
-              name="selectbox"
               className="text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-1 rounded-[8px] hover:bg-smallTextColor hover:text-white hover:font-[600] ease-in duration-300"
               onChange={(e) => changeLanguage(e)}
             >
@@ -131,15 +143,6 @@ const Header = ({ t }) => {
                 </option>
               ))}
             </select>
-
-            {/* <a
-              onClick={handleClick}
-              href="#contact"
-              className="flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300"
-            >
-              <i class="ri-send-plane-line"></i>
-              Let's Talk
-            </a> */}
 
             <span
               onClick={toggleMenu}

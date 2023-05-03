@@ -57,3 +57,21 @@ export const languages = [
     flag: albania,
   },
 ];
+
+export const colors = [
+  {
+    id: "red",
+    color: "#FF4141",
+    theme: "Red",
+  },
+  {
+    id: "green",
+    color: "#39AD78",
+    theme: "Green",
+  },
+  {
+    id: "orange",
+    color: "#ffaa00",
+    theme: "Orange",
+  },
+];

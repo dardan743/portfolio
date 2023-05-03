@@ -1,8 +1,10 @@
 {
   "about": "About",
   "services": "Services",
-  "portfolio": "Portfolio",
+  "projects": "Projects",
   "contact": "Contact",
+  "skills": "Skills",
+  "work": "Experience",
   "hello": "Hello",
   "welcome": "Welcome",
   "dev": "Software Developer",
