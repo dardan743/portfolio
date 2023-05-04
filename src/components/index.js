@@ -4,6 +4,7 @@ export { default as Input } from "./custom/Input";
 export { default as Modal } from "./custom/Modal";
 export { default as Player } from "./custom/Player";
 export { default as Carousel } from "./custom/Carousel";
+export { default as ExtraModel } from "./custom/ExtraModel";
 
 // Global Components
 export { default as Header } from "./Header";
