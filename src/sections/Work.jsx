@@ -1,6 +1,7 @@
 import React from "react";
 import digitize from "assets/images/work/digitize.png";
 import vizion from "assets/images/work/vizion.png";
+import design from "assets/images/work/design.png";
 
 const data = [
   {
@@ -29,7 +30,7 @@ const data = [
     position: "React Native & Javascript Developer",
     img: vizion,
     company: "Vizion Agency LLC",
-    time: "Febuary 2019 To July 2021",
+    time: "Febuary 2020 To July 2021",
     location: "Prishtine, Kosovo",
     responsibilities: [
       {
@@ -46,6 +47,31 @@ const data = [
       },
     ],
     type: "right",
+  },
+  {
+    position: "UI / UX Designer",
+    img: design,
+    company: "Freelance",
+    time: "March 2019 To April 2020",
+    location: "Everywhere",
+    responsibilities: [
+      {
+        name: "Developing concepts, graphics and layouts, including making decisions about fonts, images, readability and readers needs",
+      },
+      {
+        name: "Determining size and arrangement of copy and illustrative material, as well as font style and size",
+      },
+      {
+        name: "Keeping clients up to date, listening to and acting on feedback, and explaining the rationale behind graphic design decisions",
+      },
+      {
+        name: "reviewing final layouts and suggesting improvements if required",
+      },
+      {
+        name: "keeping up to date with design and software trends",
+      },
+    ],
+    type: "left",
   },
 ];
 

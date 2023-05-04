@@ -110,11 +110,17 @@ const Portfolio = () => {
               data-aos-duration="1000"
               className="group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]"
             >
-              <figure>
+              <figure
+                style={{
+                  background: portfolio.imageBg,
+                  padding: "6%",
+                  borderRadius: 8,
+                }}
+              >
                 <img className="rounded-[8px]" src={portfolio.image} alt="" />
               </figure>
 
-              <div className="w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block">
+              <div className="w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block rounded-[8px]">
                 <div className="w-full h-full flex items-center justify-center">
                   <button
                     onClick={() => showModalHandler(portfolio.id)}
