@@ -123,6 +123,41 @@ section {
   color: #081e21 !important;
 }
 
+.scroll_hover_img {
+  display: block;
+  width: auto;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #ff4141;
+  border-radius: 10px;
+  margin: 0 auto;
+  img {
+    // bottom: -890px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: top 15s;
+    -moz-transition: top 15s;
+    -ms-transition: top 15s;
+    -o-transition: top 15s;
+    transition: bottom 15s;
+  }
+  &:hover {
+    img {
+      bottom: 0;
+      -webkit-transition: all 15s;
+      -moz-transition: all 15s;
+      -ms-transition: all 15s;
+      -o-transition: all 15s;
+      transition: all 15s;
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .menu {
     width: 100%;

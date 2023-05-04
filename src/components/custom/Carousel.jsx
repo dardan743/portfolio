@@ -36,8 +36,10 @@ const CustomCarousel = ({ sliderData, extraStyle }) => {
       className={extraStyle}
       responsive={responsive}
     >
-      {sliderData.map((img, i) => (
-        <img className="rounded-[8px]" src={img.url} alt="" key={i} />
+      {sliderData?.map((img, i) => (
+        <div class="scroll_hover_img" key={i}>
+          <img style={{ bottom: img.px }} src={img.url} alt="" />
+        </div>
       ))}
     </Carousel>
   );
