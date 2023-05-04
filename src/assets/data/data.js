@@ -25,6 +25,21 @@ import BiomedicaProductsFull from "../images/portfolio/biomedica/biomedica-produ
 // Google NextJS
 import Google from "../images/portfolio/google/google.png";
 import GoogleFull from "../images/portfolio/google/google-full.png";
+// Capital Ria
+import CaptaiLogo from "../images/portfolio/capitalRia/logo.png";
+import POSLogin from "../images/portfolio/capitalRia/POS/ria_signin.jpg";
+import POSSignUp from "../images/portfolio/capitalRia/POS/ria_signup.jpg";
+import POSOtp from "../images/portfolio/capitalRia/POS/ria_otp.jpg";
+import POSTransactions from "../images/portfolio/capitalRia/POS/ria_pos_transactions.jpg";
+//Mobile
+import Shared from "../images/portfolio/mobile/shared.png";
+import SharedQR from "../images/portfolio/mobile/shared_qr.png";
+import Lafee from "../images/portfolio/mobile/lafee.png";
+// import dashboard from "../images/portfolio/mobile/dashboard.jpg";
+// import jobs from "../images/portfolio/mobile/jobs.jpg";
+// import addCleint from "../images/portfolio/mobile/add_client.jpg";
+// import login from "../images/portfolio/mobile/login.jpg";
+
 // Flags
 import albania from "assets/flags/al.png";
 import en from "assets/flags/uk.jpg";
@@ -37,7 +52,6 @@ import en from "assets/flags/uk.jpg";
 // Mobile
 // https://github.com/dardan743/La-fee
 // https://github.com/dardan743/Chat-App
-// https://github.com/dardan743/Capital-Ria-POS
 
 const category = {
   all: "all",
@@ -58,6 +72,10 @@ const bgColor = {
   orange: "#c87f25",
   bioColor: "#0bb3a2",
   estate: "#6d28d9",
+  capital: "#ff680d",
+  black: "#252525",
+  shared: "#32de84",
+  lafee: "#e90df5",
 };
 
 export const projects = [
@@ -74,7 +92,7 @@ export const projects = [
         px: "-300px",
       },
     ],
-    imageBg: bgColor.bioColor,
+    color: bgColor.bioColor,
     category: category.web,
     title: "-Biomedica-",
     description:
@@ -102,7 +120,7 @@ export const projects = [
         url: MovieXFull1,
       },
     ],
-    imageBg: bgColor.lightBlue,
+    color: bgColor.lightBlue,
     category: category.web,
     title: "-MovieX-",
     description:
@@ -128,7 +146,7 @@ export const projects = [
         url: CarRentalFull,
       },
     ],
-    imageBg: bgColor.red,
+    color: bgColor.red,
     category: category.web,
     title: "-Rent a Car-",
     description:
@@ -155,7 +173,7 @@ export const projects = [
         url: GyMateFull,
       },
     ],
-    imageBg: bgColor.purple,
+    color: bgColor.purple,
     category: category.web,
     title: "-GYMate-",
     description:
@@ -171,7 +189,7 @@ export const projects = [
         url: PizzaFull,
       },
     ],
-    imageBg: bgColor.orange,
+    color: bgColor.orange,
     category: category.web,
     title: "-PizzaBot-",
     description: "Pizza online ordering landing page!",
@@ -189,7 +207,7 @@ export const projects = [
         url: RealtateDetails,
       },
     ],
-    imageBg: bgColor.estate,
+    color: bgColor.estate,
     category: category.web,
     title: "-Real Estate-",
     description: "Real Estate UI!",
@@ -204,12 +222,82 @@ export const projects = [
         url: GoogleFull,
       },
     ],
-    imageBg: bgColor.lightPurple,
+    color: bgColor.lightPurple,
     category: category.web,
     title: "-Google Clone-",
     description: "Google search engine clone!",
     technologies: ["React", "NextJS", "Rest APIs", "SASS"],
     siteUrl: "https://google-ish.vercel.app",
+  },
+  {
+    id: 8,
+    image: CaptaiLogo,
+    images: [
+      {
+        url: POSLogin,
+      },
+      {
+        url: POSSignUp,
+      },
+      {
+        url: POSOtp,
+      },
+      {
+        url: POSTransactions,
+      },
+    ],
+    color: bgColor.capital,
+    category: category.mobile,
+    title: "-Capital Ria POS-",
+    description: "Capital Ria POS Moboile App!",
+    technologies: [
+      "React Native",
+      "Expo",
+      "Redux",
+      "Rest APIs",
+      "React-Navigation",
+    ],
+    siteUrl:
+      "https://expo.dev/@swag_mf/capital-pos?serviceType=classic&distribution=expo-go",
+  },
+  {
+    id: 9,
+    image: Shared,
+    images: [
+      {
+        url: SharedQR,
+      },
+    ],
+    color: bgColor.black,
+
+    category: category.mobile,
+    title: "-Shared Element Transition-",
+    description: "Shared element transition using react native!",
+    technologies: ["React Native", "Expo", "React-native-shared-element"],
+    siteUrl: "",
+  },
+  {
+    id: 10,
+    image: Lafee,
+    images: [
+      {
+        url: Lafee,
+      },
+    ],
+    color: bgColor.lafee,
+    category: category.mobile,
+    title: "-L`a Fee-",
+    description:
+      "L`a Fee is a managment system for a small company in France, they use it to manage the workers of the company and finances!",
+    technologies: [
+      "React Native",
+      "Expo",
+      "EAS Deploy & Cli",
+      "Async Storage",
+      "Digital Signature",
+    ],
+    siteUrl:
+      "https://expo.dev/@swag_mf/la-fee-du-logis?serviceType=classic&distribution=expo-go",
   },
 ];
 

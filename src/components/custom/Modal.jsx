@@ -1,13 +1,21 @@
 import React from "react";
 import { projects } from "assets/data/data";
-import { Carousel } from "components";
+import { Carousel, MobileCarousel } from "components";
 
 const Modal = ({ activeID, setShowModal }) => {
   const portfolio = projects.find((portfolio) => portfolio.id === activeID);
   return (
     <div className="w-full h-full fixed top-0 left-0 z-10 bg-headingColor bg-opacity-40">
-      <div className=" w-11/12 md:max-w-[600px] md:w-full absolute top-1/2 left-1/2 z-20 bg-white rounded-[8px] transform -translate-x-1/2 -translate-y-1/2 p-5">
-        <Carousel sliderData={portfolio.images} />
+      <div className="w-11/12 md:max-w-[600px] md:w-full absolute top-1/2 left-1/2 z-20 bg-white rounded-[8px] transform -translate-x-1/2 -translate-y-1/2 p-5">
+        {portfolio.category === "Mobile App" ? (
+          <MobileCarousel
+            sliderData={portfolio.images}
+            border={portfolio.color}
+          />
+        ) : (
+          <Carousel sliderData={portfolio.images} border={portfolio.color} />
+        )}
+
         <div>
           <h2 className="text-2xl text-headingColor font-[700] my-5">
             {portfolio.title}

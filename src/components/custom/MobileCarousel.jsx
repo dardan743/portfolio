@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const CustomCarousel = ({ sliderData, extraStyle, border }) => {
+const MobileCarousel = ({ sliderData, extraStyle, border }) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -37,20 +37,12 @@ const CustomCarousel = ({ sliderData, extraStyle, border }) => {
       responsive={responsive}
     >
       {sliderData?.map((img, i) => (
-        <div
-          class="scroll_hover_img"
-          key={i}
-          style={{ border: `2px solid ${border}` }}
-        >
-          <img
-            // style={{ bottom: img.px }}
-            src={img.url}
-            alt=""
-          />
+        <div key={i} className="mobile_carousel">
+          <img src={img.url} alt="" style={{ border: `2px solid ${border}` }} />
         </div>
       ))}
     </Carousel>
   );
 };
 
-export default CustomCarousel;
+export default MobileCarousel;

@@ -74,7 +74,7 @@ const Portfolio = () => {
               onClick={() => setSelectTab("web-apps")}
               className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
-              Web Apps
+              Web
             </button>
             <button
               style={{
@@ -85,7 +85,7 @@ const Portfolio = () => {
               onClick={() => setSelectTab("mobile-apps")}
               className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
-              Mobile Apps
+              Mobile
             </button>
             <button
               style={{
@@ -96,7 +96,7 @@ const Portfolio = () => {
               onClick={() => setSelectTab("ux-design")}
               className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
-              UI/UX Design
+              UI/UX
             </button>
           </div>
         </div>
@@ -112,7 +112,7 @@ const Portfolio = () => {
             >
               <figure
                 style={{
-                  background: portfolio.imageBg,
+                  background: portfolio.color,
                   padding: "6%",
                   borderRadius: 8,
                 }}

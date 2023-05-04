@@ -86,7 +86,7 @@ const Left = ({ img, company, position, time, location, responsibilities }) => (
             data-aos-duration="1400"
             className="bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150"
           >
-            <h3 className="text-primaryColor font-[800] mb-3 group-hover:text-white group-hover:font-[800] text-xl">
+            <h3 className="text-primaryColor font-[800] mb-3 group-hover:text-white group-hover:font-[800] text-xl sm:mt-10">
               {position}
             </h3>
             <p className="text-smallTextColor font-[700] mb-3 group-hover:text-white group-hover:font-[700]">
