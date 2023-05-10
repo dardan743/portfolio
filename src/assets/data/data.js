@@ -50,14 +50,13 @@ import en from "assets/flags/uk.jpg";
 // https://github.com/dardan743/react-dashboard-template
 
 // Mobile
-// https://github.com/dardan743/La-fee
 // https://github.com/dardan743/Chat-App
 
 const category = {
   all: "all",
-  web: "Web App",
-  design: "Ux",
-  mobile: "Mobile App",
+  web: "WEB",
+  design: "UIUX",
+  mobile: "MOBILE",
 };
 
 const bgColor = {

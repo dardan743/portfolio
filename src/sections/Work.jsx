@@ -65,10 +65,10 @@ const data = [
         name: "Keeping clients up to date, listening to and acting on feedback, and explaining the rationale behind graphic design decisions",
       },
       {
-        name: "reviewing final layouts and suggesting improvements if required",
+        name: "Reviewing final layouts and suggesting improvements if required",
       },
       {
-        name: "keeping up to date with design and software trends",
+        name: "Keeping up to date with design and software trends",
       },
     ],
     type: "left",

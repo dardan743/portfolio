@@ -5,6 +5,7 @@ import { Modal } from "components";
 const Portfolio = () => {
   const [nextItems, setNextItems] = useState(6);
   const [portfolios, setPortfolios] = useState(projects);
+  console.log("portfolios", portfolios);
   const [selectTab, setSelectTab] = useState("all");
   const [showModal, setShowModal] = useState(false);
   const [activeID, setActiveID] = useState(null);
@@ -23,22 +24,20 @@ const Portfolio = () => {
       setPortfolios(projects);
     }
 
-    if (selectTab === "web-apps") {
+    if (selectTab === "web") {
+      const filteredData = projects.filter((item) => item.category === "WEB");
+      setPortfolios(filteredData);
+    }
+
+    if (selectTab === "mobile") {
       const filteredData = projects.filter(
-        (item) => item.category === "Web App"
+        (item) => item.category === "MOBILE"
       );
       setPortfolios(filteredData);
     }
 
-    if (selectTab === "mobile-apps") {
-      const filteredData = projects.filter(
-        (item) => item.category === "Mobile App"
-      );
-      setPortfolios(filteredData);
-    }
-
-    if (selectTab === "ux-design") {
-      const filteredData = projects.filter((item) => item.category === "Ux");
+    if (selectTab === "design") {
+      const filteredData = projects.filter((item) => item.category === "UIUX");
       setPortfolios(filteredData);
     }
   }, [selectTab]);
@@ -68,10 +67,10 @@ const Portfolio = () => {
             <button
               style={{
                 backgroundColor:
-                  selectTab === "web-apps" ? "#193256" : "transparent",
-                color: selectTab === "web-apps" ? "#FF4141" : "#193256",
+                  selectTab === "web" ? "#193256" : "transparent",
+                color: selectTab === "web" ? "#FF4141" : "#193256",
               }}
-              onClick={() => setSelectTab("web-apps")}
+              onClick={() => setSelectTab("web")}
               className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
               Web
@@ -79,10 +78,10 @@ const Portfolio = () => {
             <button
               style={{
                 backgroundColor:
-                  selectTab === "mobile-apps" ? "#193256" : "transparent",
-                color: selectTab === "mobile-apps" ? "#FF4141" : "#193256",
+                  selectTab === "mobile" ? "#193256" : "transparent",
+                color: selectTab === "mobile" ? "#FF4141" : "#193256",
               }}
-              onClick={() => setSelectTab("mobile-apps")}
+              onClick={() => setSelectTab("mobile")}
               className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
               Mobile
@@ -90,10 +89,10 @@ const Portfolio = () => {
             <button
               style={{
                 backgroundColor:
-                  selectTab === "ux-design" ? "#193256" : "transparent",
-                color: selectTab === "ux-design" ? "#FF4141" : "#193256",
+                  selectTab === "design" ? "#193256" : "transparent",
+                color: selectTab === "design" ? "#FF4141" : "#193256",
               }}
-              onClick={() => setSelectTab("ux-design")}
+              onClick={() => setSelectTab("design")}
               className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
               UI/UX
@@ -102,38 +101,41 @@ const Portfolio = () => {
         </div>
 
         <div className="flex items-center gap-4 flex-wrap mt-12">
-          {portfolios?.slice(0, nextItems)?.map((portfolio, index) => (
-            <div
-              key={index}
-              data-aos="fade-zoom-in"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              className="group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]"
-            >
-              <figure
-                style={{
-                  background: portfolio.color,
-                  padding: "6%",
-                  borderRadius: 8,
-                }}
+          {portfolios.length > 0 ? (
+            portfolios?.slice(0, nextItems)?.map((portfolio, index) => (
+              <div
+                key={index}
+                data-aos="fade-zoom-in"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                className="group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]"
               >
-                <img className="rounded-[8px]" src={portfolio.image} alt="" />
-              </figure>
+                <figure
+                  style={{
+                    background: portfolio.color,
+                    padding: "6%",
+                    borderRadius: 8,
+                  }}
+                >
+                  <img className="rounded-[8px]" src={portfolio.image} alt="" />
+                </figure>
 
-              <div className="w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block rounded-[8px]">
-                <div className="w-full h-full flex items-center justify-center">
-                  <button
-                    onClick={() => showModalHandler(portfolio.id)}
-                    className="text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
-                  >
-                    See Details
-                  </button>
+                <div className="w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block rounded-[8px]">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <button
+                      onClick={() => showModalHandler(portfolio.id)}
+                      className="text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
+                    >
+                      See Details
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p style={{ margin: "0 auto" }}>No {selectTab} Projects</p>
+          )}
         </div>
-
         <div className="text-center mt-6">
           {nextItems < portfolios.length && projects.length > 6 && (
             <button
