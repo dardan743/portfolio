@@ -10,10 +10,10 @@
 - Update Section IDs
 - Change Song
 - Tab Change Active Color
+- Create New PDF Resume
 
 # To Do:
 
 - Add Certificates
 - Add Testimonials
 - Add Projects
-- Create New PDF Resume
