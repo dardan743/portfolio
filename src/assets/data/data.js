@@ -35,6 +35,8 @@ import POSTransactions from "../images/portfolio/capitalRia/POS/ria_pos_transact
 import Shared from "../images/portfolio/mobile/shared.png";
 import SharedQR from "../images/portfolio/mobile/shared_qr.png";
 import Lafee from "../images/portfolio/mobile/lafee.png";
+import MovieStreamQr from "../images/portfolio/movie-streaming/qr.png";
+
 // import dashboard from "../images/portfolio/mobile/dashboard.jpg";
 // import jobs from "../images/portfolio/mobile/jobs.jpg";
 // import addCleint from "../images/portfolio/mobile/add_client.jpg";
@@ -48,9 +50,6 @@ import en from "assets/flags/uk.jpg";
 // Add Capital BackOffice, Web Client, SZR
 // https://github.com/dardan743/ecommerce-diploma
 // https://github.com/dardan743/react-dashboard-template
-
-// Mobile
-// https://github.com/dardan743/Chat-App
 
 const category = {
   all: "all",
@@ -162,7 +161,7 @@ export const projects = [
       "YML",
       "Docker",
     ],
-    siteUrl: "https://stefantopalovicdev.vercel.app",
+    siteUrl: "https://car-rental-ten.vercel.app",
   },
   {
     id: 4,
@@ -256,8 +255,8 @@ export const projects = [
       "Rest APIs",
       "React-Navigation",
     ],
-    siteUrl:
-      "https://expo.dev/@swag_mf/capital-pos?serviceType=classic&distribution=expo-go",
+    siteUrl: null,
+    // siteUrl"https://expo.dev/@swag_mf/capital-pos?serviceType=classic&distribution=expo-go",
   },
   {
     id: 9,
@@ -273,7 +272,7 @@ export const projects = [
     title: "-Shared Element Transition-",
     description: "Shared element transition using react native!",
     technologies: ["React Native", "Expo", "React-native-shared-element"],
-    siteUrl: "",
+    siteUrl: null,
   },
   {
     id: 10,
@@ -295,8 +294,23 @@ export const projects = [
       "Async Storage",
       "Digital Signature",
     ],
-    siteUrl:
-      "https://expo.dev/@swag_mf/la-fee-du-logis?serviceType=classic&distribution=expo-go",
+    siteUrl: null,
+    // siteUrl:"https://expo.dev/@swag_mf/la-fee-du-logis?serviceType=classic&distribution=expo-go",
+  },
+  {
+    id: 11,
+    image: Shared,
+    images: [
+      {
+        url: MovieStreamQr,
+      },
+    ],
+    color: bgColor.black,
+    category: category.mobile,
+    title: "-Movie Streaming App-",
+    description: "Movie streaming app UI with authentication!",
+    technologies: ["React Native", "Expo", "Firebase Auth"],
+    siteUrl: null,
   },
 ];
 

@@ -40,11 +40,13 @@ const Modal = ({ activeID, setShowModal }) => {
             ))}
           </div>
 
-          <a href={portfolio.siteUrl} target="_blank" rel="noreferrer">
-            <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300">
-              Live Site
-            </button>
-          </a>
+          {portfolio.siteUrl !== null ? (
+            <a href={portfolio.siteUrl} target="_blank" rel="noreferrer">
+              <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300">
+                Live Site
+              </button>
+            </a>
+          ) : null}
         </div>
 
         <button
