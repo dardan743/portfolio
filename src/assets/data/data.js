@@ -161,7 +161,7 @@ export const projects = [
       "YML",
       "Docker",
     ],
-    siteUrl: "https://car-rental-ten.vercel.app",
+    siteUrl: "https://rent-a-car-dll.netlify.app/",
   },
   {
     id: 4,
