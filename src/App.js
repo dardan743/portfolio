@@ -7,7 +7,7 @@ import {
   SKILLS,
   PORTFOLIO,
   WORK,
-  TESTIMONIALS,
+  // TESTIMONIALS,
 } from "sections";
 import { Header, Footer } from "components";
 import { useTranslation } from "react-i18next";
@@ -27,7 +27,7 @@ function App() {
         <SERVICES />
         <WORK />
         <PORTFOLIO />
-        <TESTIMONIALS />
+        {/* <TESTIMONIALS /> */}
         <CONTACT />
       </main>
       <Footer />

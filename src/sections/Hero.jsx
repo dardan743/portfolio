@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import heroImg from "assets/images/dardan.png";
 import resume from "assets/cv.pdf";
 import CountUp from "react-countup";
-import ExtraModal from "components/custom/ExtraModel";
 
 const Hero = ({ t }) => {
-  const [showModal, setShowModal] = useState(false);
   return (
     <section className="pt-0" id="about">
       <div className="container pt-14">
@@ -54,7 +52,7 @@ const Hero = ({ t }) => {
               data-aos-duration="1500"
               className="flex gap-2 text-headingColor mt-12 font-[500] text-[15px] leading-7 sm:pr-10"
             >
-              <span onClick={() => setShowModal(true)}>
+              <span>
                 <i class="ri-apps-2-line"></i>
               </span>
               {t("about_me")}
@@ -152,11 +150,6 @@ const Hero = ({ t }) => {
           {/* =========  hero content  right end ===========*/}
         </div>
       </div>
-      {showModal && (
-        <ExtraModal setShowModal={setShowModal}>
-          <p>Text</p>
-        </ExtraModal>
-      )}
     </section>
   );
 };
