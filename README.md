@@ -1,5 +1,5 @@
-<!-- ## Hello there 👋 <img align="right" src="https://komarev.com/ghpvc/?username=alcianerdurmaz&color=51c2d5">
- -->
+## Hello there 👋 <img align="right" src="https://komarev.com/ghpvc/?username=dardan743&color=51c2d5">
+
 I love writing software to solve problems 🥰
 
 ### 🛠 &nbsp;Tech Stack
