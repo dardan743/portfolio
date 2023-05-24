@@ -1,5 +1,5 @@
-## Hello there 👋 <img align="right" src="https://komarev.com/ghpvc/?username=alcianerdurmaz&color=51c2d5">
-
+<!-- ## Hello there 👋 <img align="right" src="https://komarev.com/ghpvc/?username=alcianerdurmaz&color=51c2d5">
+ -->
 I love writing software to solve problems 🥰
 
 ### 🛠 &nbsp;Tech Stack
@@ -30,7 +30,7 @@ I love writing software to solve problems 🥰
 
 ### ⚙️ &nbsp;GitHub Analytics
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dardan743&layout=compact&theme=radical&count_private=true&langs_count=5&exclude_repo=BIL2002-final,MemoryGame-MadeWithUnity&hide=html,python,shell)](https://github.com/dardan743)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dardan743&layout=compact&theme=radical&count_private=true)](https://github.com/dardan743)
 
 ### 📫 &nbsp;Connect with Me
 
