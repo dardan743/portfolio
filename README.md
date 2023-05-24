@@ -34,6 +34,7 @@ I love writing software to solve problems 🥰
 
 ### 📫 &nbsp;Connect with Me
 
-[![gmail](https://img.shields.io/badge/-alicanerdurmaz@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white)](mailto:dardanllapashticaa@gmail.com)
-[![instagram](https://img.shields.io/badge/-alicanerdurmazz-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://www.instagram.com/dardan_llapashtica/)
-[![linkedin](https://img.shields.io/badge/-alicanerdurmaz-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dardan-llapashtica/)
+[![gmail](https://img.shields.io/badge/-dardanllapashticaa@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white)](mailto:dardanllapashticaa@gmail.com)
+[![instagram](https://img.shields.io/badge/-dardan_llapashtica-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://www.instagram.com/dardan_llapashtica/)
+[![linkedin](https://img.shields.io/badge/-dardan-llapashtica-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dardan-llapashtica/)
+
