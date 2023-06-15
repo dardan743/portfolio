@@ -58,6 +58,15 @@ const data = [
       {
         name: "Firebase",
       },
+      {
+        name: "Mongo DB",
+      },
+      {
+        name: "Microsoft SQL",
+      },
+      {
+        name: "My SQL",
+      },
     ],
     type: "right",
   },
