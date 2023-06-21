@@ -34,7 +34,7 @@ const Hero = ({ t }) => {
             >
               <a href="#contact">
                 <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">
-                  <i class="ri-mail-line"></i> {t("hire")}
+                  <i className="ri-mail-line"></i> {t("hire")}
                 </button>
               </a>
               <a
@@ -53,7 +53,7 @@ const Hero = ({ t }) => {
               className="flex gap-2 text-headingColor mt-12 font-[500] text-[15px] leading-7 sm:pr-10"
             >
               <span>
-                <i class="ri-apps-2-line"></i>
+                <i className="ri-apps-2-line"></i>
               </span>
               {t("about_me")}
             </p>
@@ -69,7 +69,7 @@ const Hero = ({ t }) => {
                   href="https://www.instagram.com/dardan_llapashtica/"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <i class="ri-instagram-line"></i>
+                  <i className="ri-instagram-line"></i>
                 </a>
               </span>
               <span>
@@ -79,7 +79,7 @@ const Hero = ({ t }) => {
                   href="https://github.com/dardan743"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <i class="ri-github-fill"></i>
+                  <i className="ri-github-fill"></i>
                 </a>
               </span>
               <span>
@@ -89,7 +89,7 @@ const Hero = ({ t }) => {
                   href="https://www.facebook.com/dardan.llapashtica.16/"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <i class="ri-facebook-line"></i>
+                  <i className="ri-facebook-line"></i>
                 </a>
               </span>
               <span>
@@ -99,7 +99,7 @@ const Hero = ({ t }) => {
                   href="https://www.linkedin.com/in/dardan-llapashtica/"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <i class="ri-linkedin-line"></i>
+                  <i className="ri-linkedin-line"></i>
                 </a>
               </span>
             </div>

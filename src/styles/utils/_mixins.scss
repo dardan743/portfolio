@@ -1,0 +1,60 @@
+@mixin for-phone-only-extra {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-phone-only {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait {
+  @media (max-width: 880px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin for-laptop-s {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin for-laptop-min {
+  @media (max-width: 1550px) {
+    @content;
+  }
+}
+
+@mixin for-big-laptop {
+  @media (max-width: 1799px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop {
+  @media (min-width: 2000px) {
+    @content;
+  }
+}
+
+@mixin bezier-transition(
+  $prop: all,
+  $speed: 0.5s,
+  $func: cubic-bezier(0.77, 0, 0.175, 1)
+) {
+  // -webkit-transition: all $speed cubic-bezier(.4, 0, .2, 1);
+  -webkit-transition: $prop $speed $func;
+  -moz-transition: $prop $speed $func;
+  -o-transition: $prop $speed $func;
+  -ms-transition: $prop $speed $func;
+  transition: $prop $speed $func;
+}

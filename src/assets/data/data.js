@@ -51,6 +51,49 @@ import en from "assets/flags/uk.jpg";
 // https://github.com/dardan743/ecommerce-diploma
 // https://github.com/dardan743/react-dashboard-template
 
+import { MdOutlineDashboard } from "react-icons/md";
+import { SiCounterstrike, SiPubg } from "react-icons/si";
+import { TbBrandFortnite } from "react-icons/tb";
+
+import * as ROUTES from "constants/routes";
+
+export const sidebarLinks = [
+  {
+    title: "",
+    children: [
+      {
+        id: "dashbaord",
+        icon: <MdOutlineDashboard />,
+        link: "Dashboard",
+        url: ROUTES.DASHBOARD,
+      },
+    ],
+  },
+  {
+    title: "GAME SETTINGS",
+    children: [
+      {
+        id: "csgo",
+        icon: <SiCounterstrike />,
+        link: "CSGO",
+        url: ROUTES.CSGO,
+      },
+      {
+        id: "fortnite",
+        icon: <TbBrandFortnite />,
+        link: "Fortnite",
+        url: ROUTES.DASHBOARD,
+      },
+      {
+        id: "p[ubg",
+        icon: <SiPubg />,
+        link: "PUBG",
+        url: ROUTES.DASHBOARD,
+      },
+    ],
+  },
+];
+
 const category = {
   all: "all",
   web: "WEB",

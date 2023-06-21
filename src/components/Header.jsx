@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Player } from "components";
-import Song from "assets/amors.mp3";
+// import { Player } from "components";
+// import Song from "assets/amors.mp3";
 import i18next from "i18next";
 import { languages } from "assets/data/data";
 import { BsInfoLg } from "react-icons/bs";
@@ -144,7 +144,7 @@ const Header = ({ t }) => {
 
             {/* ========= menu right ========== */}
             <div className="flex items-center gap-4">
-              <Player url={Song} />
+              {/* <Player url={Song} /> */}
               <select
                 className="text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-1 rounded-[8px] hover:bg-smallTextColor hover:text-white hover:font-[600] ease-in duration-300"
                 onChange={(e) => changeLanguage(e)}
@@ -169,7 +169,7 @@ const Header = ({ t }) => {
                 onClick={toggleMenu}
                 className="text-2xl text-smallTextColor md:hidden cursor-pointer"
               >
-                <i class="ri-menu-line"></i>
+                <i className="ri-menu-line"></i>
               </span>
             </div>
             {/* ========= menu end ========== */}
