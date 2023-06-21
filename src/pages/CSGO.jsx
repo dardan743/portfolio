@@ -5,6 +5,9 @@ import { MdOutlineCopyAll, MdOutlineRocketLaunch } from "react-icons/md";
 import { FiBox } from "react-icons/fi";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import benq from "assets/images/benq.png";
+import mouse from "assets/images/mouse.png";
+import keyboard from "assets/images/keyboard.png";
+import headphones from "assets/images/headphones.png";
 
 const CSGO = () => {
   const [copiedVM, setCopiedVM] = React.useState(false);
@@ -14,9 +17,10 @@ const CSGO = () => {
   const [copiedLO, setCopiedLO] = React.useState(false);
   const copyLO = () => setCopiedLO(true);
 
-  const Sector = ({ img, title, text }) => (
+  const Sector = ({ img, title, text, desc }) => (
     <div>
-      <img src={img} alt="" />
+      {img && <img src={img} alt="" className="w-[150px]" />}
+      {desc && <span className="text-gray font-[800] text-center">{desc}</span>}
       <p className="text-gray font-[500]">{title}</p>
       <span className="text-gray font-[800] text-center">{text}</span>
     </div>
@@ -117,7 +121,18 @@ const CSGO = () => {
           </div>
         </div>
         <div className="flex items-center gap-14 pt-5 flex-wrap">
-          <Sector img={benq} title={" "} text="BenQ Zowie XL2566K" />
+          <Sector img={benq} title={" "} desc="BenQ Zowie XL2566K" />
+          <Sector
+            img={mouse}
+            title={" "}
+            desc="Logitech G Pro X Superlight Red"
+          />
+          <Sector img={keyboard} title={" "} text="Logitech G715" />
+          <Sector
+            img={headphones}
+            title={" "}
+            desc="Logitech G Pro X Headset"
+          />
         </div>
       </div>
     </div>
