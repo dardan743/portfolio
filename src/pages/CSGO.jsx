@@ -49,7 +49,6 @@ const CSGO = () => {
             </CopyToClipboard>
           </div>
         </div>
-        <p className="border-b-2 border-[#eee] pt-3 pb-3">Video</p>
         <div className="flex items-center gap-14 pt-5 flex-wrap">
           <Sector title="DPI" text="400" />
           <Sector title="Sensitivity" text="1.5" />
@@ -59,13 +58,6 @@ const CSGO = () => {
           <Sector title="Windows Sensitivity" text="6" />
           <Sector title="Raw Input" text="1" />
           <Sector title="Mouse Acceleration" text="0" />
-        </div>
-        <p className="border-b-2 border-[#eee] pt-3 pb-3">Advanced Video</p>
-        <div className="flex items-center gap-14 pt-5 flex-wrap">
-          <Sector title="Global Shadow Quality" text="Very Low" />
-          <Sector title="Model / Texture Detail" text="Low" />
-          <Sector title="Texture Streaming" text="Disabled" />
-          <Sector title="Effect Detail" text="Low" />
         </div>
       </div>
 
@@ -154,13 +146,8 @@ const CSGO = () => {
             <RiComputerLine size={25} />
             <p>Video Settings</p>
           </div>
-          <div className="flex items-center gap-2">
-            <p>{copiedLO ? "Copied" : "Copy"}</p>
-            <CopyToClipboard text="" onCopy={copyLO}>
-              <MdOutlineCopyAll size={25} className="cursor-pointer	" />
-            </CopyToClipboard>
-          </div>
         </div>
+        <p className="border-b-2 border-[#eee] pt-3 pb-3">Video</p>
         <div className="flex items-center gap-14 pt-5 flex-wrap">
           <Sector title="Resolution" text="1280x960" />
           <Sector title="Aspect Ratio" text="4:3" />
@@ -168,6 +155,13 @@ const CSGO = () => {
           <Sector title="Color Mode" text="Computer Monitor" />
           <Sector title="Brightness" text="80%" />
           <Sector title="Display Mode" text="Fullscreen" />
+        </div>
+        <p className="border-b-2 border-[#eee] pt-3 pb-3">Advanced Video</p>
+        <div className="flex items-center gap-14 pt-5 flex-wrap">
+          <Sector title="Global Shadow Quality" text="Very Low" />
+          <Sector title="Model / Texture Detail" text="Low" />
+          <Sector title="Texture Streaming" text="Disabled" />
+          <Sector title="Effect Detail" text="Low" />
         </div>
       </div>
 

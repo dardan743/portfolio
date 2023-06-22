@@ -52,8 +52,11 @@ import en from "assets/flags/uk.jpg";
 // https://github.com/dardan743/react-dashboard-template
 
 import { MdOutlineDashboard } from "react-icons/md";
-import { SiCounterstrike, SiPubg } from "react-icons/si";
-import { TbBrandFortnite } from "react-icons/tb";
+import {
+  SiCounterstrike,
+  // SiPubg
+} from "react-icons/si";
+// import { TbBrandFortnite } from "react-icons/tb";
 
 import * as ROUTES from "constants/routes";
 
@@ -78,18 +81,18 @@ export const sidebarLinks = [
         link: "CSGO",
         url: ROUTES.CSGO,
       },
-      {
-        id: "fortnite",
-        icon: <TbBrandFortnite />,
-        link: "Fortnite",
-        url: ROUTES.DASHBOARD,
-      },
-      {
-        id: "p[ubg",
-        icon: <SiPubg />,
-        link: "PUBG",
-        url: ROUTES.DASHBOARD,
-      },
+      // {
+      //   id: "fortnite",
+      //   icon: <TbBrandFortnite />,
+      //   link: "Fortnite",
+      //   url: ROUTES.DASHBOARD,
+      // },
+      // {
+      //   id: "p[ubg",
+      //   icon: <SiPubg />,
+      //   link: "PUBG",
+      //   url: ROUTES.DASHBOARD,
+      // },
     ],
   },
 ];
@@ -387,5 +390,254 @@ export const colors = [
     id: "orange",
     color: "#ffaa00",
     theme: "Orange",
+  },
+];
+
+export const dashbaord = [
+  {
+    mainTitle: "Movies & TV Series",
+    section: [
+      {
+        title: "Favorite",
+        points: [
+          {
+            feild: "Papillon",
+          },
+          {
+            feild: "The Book of Henry",
+          },
+          {
+            feild: "Coach Carter",
+          },
+          {
+            feild: "Independence Day",
+          },
+          {
+            feild: "The Maze Runner",
+          },
+          {
+            feild: "Rurouni Kenshin",
+          },
+          {
+            feild: "Prisoners",
+          },
+          {
+            feild: "The Green Mile",
+          },
+          {
+            feild: "John Q",
+          },
+          {
+            feild: "Shutter Island",
+          },
+          {
+            feild: "Django Unchained",
+          },
+          {
+            feild: "Fury",
+          },
+          {
+            feild: "Hacksaw Ridge",
+          },
+        ],
+      },
+      {
+        title: "Loli ❤️‍🔥🥰",
+        points: [
+          {
+            feild: "Disturbia",
+          },
+          {
+            feild: "Thirteen lives",
+          },
+          {
+            feild: "Beyond Borders",
+          },
+          {
+            feild: "Focus",
+          },
+          {
+            feild: "Django",
+          },
+          {
+            feild: "Snowpeircer",
+          },
+          {
+            feild: "Ride Along",
+          },
+          {
+            feild: "Me Before You",
+          },
+          {
+            feild: "Project X",
+          },
+          {
+            feild: "Notebook",
+          },
+          {
+            feild: "Bad mom",
+          },
+          {
+            feild: "The Pacifier",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    mainTitle: "Payments",
+    section: [
+      {
+        title: "Subscriptions & Payments Monthly",
+        points: [
+          {
+            feild: "Snapchat Premium: 0.50 CENT",
+          },
+          {
+            feild: "Spotify: 6.50 EUR - 16th of every month",
+          },
+          {
+            feild: "Vala: 14 EUR",
+          },
+          {
+            feild: "Credit Gjirafa: 137 EUR - Shum totale = 1,640 EUR",
+          },
+          {
+            feild: "Credit Neptun: 15 EUR - Shum totale = 338 EUR",
+          },
+          {
+            feild: "Tjerat: 300 EUR",
+          },
+        ],
+      },
+      {
+        title: "Borxh",
+        points: [
+          {
+            feild: "Gulii: 200 EUR",
+          },
+          {
+            feild: "Granit: 100 EUR",
+          },
+        ],
+      },
+      {
+        title: "All",
+        points: [
+          {
+            feild: "Pagesa e kredise per muaj: 152 EUR",
+          },
+          {
+            feild: "Rroga: 600 EUR",
+          },
+          {
+            feild: "Kursimet: 100 EUR",
+          },
+          {
+            feild: "Totali i borxhit: 300 EUR",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    mainTitle: "Dropshipping",
+    section: [
+      {
+        title: "Learning",
+        points: [
+          {
+            feild: "Imam Gadzhi",
+          },
+          {
+            feild: "Sebastian Gjiorghiu",
+          },
+          {
+            feild: "Alex Hormozi",
+          },
+          {
+            feild: "Austin Rabin",
+          },
+        ],
+      },
+      {
+        title: "Products",
+        points: [
+          {
+            feild: "Sopa Brush",
+          },
+          {
+            feild: "Charger Lamp",
+          },
+          {
+            feild: "Spinner Fidget",
+          },
+          {
+            feild: "Spinner Airpods Case",
+          },
+          {
+            feild: "Custom Air Forces",
+          },
+        ],
+      },
+      {
+        title: "Check Products Sold & Unsold",
+        points: [
+          {
+            feild: "app.dropship.oi",
+          },
+          {
+            feild: "Pipiads",
+          },
+          {
+            feild: "Hellium 10",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    mainTitle: "Ideas",
+    section: [
+      {
+        title: "Web Appplications",
+        points: [
+          {
+            feild: "Ecommerce",
+          },
+          {
+            feild: "Rent anything",
+          },
+          {
+            feild: "Rent a Car",
+          },
+          {
+            feild: "Managment system for Advertisements",
+          },
+        ],
+      },
+      {
+        title: "Mobile Appplications",
+        points: [
+          {
+            feild: "Ecommerce",
+          },
+          {
+            feild: "Rent anything",
+          },
+        ],
+      },
+      {
+        title: "Desktop Appplications",
+        points: [
+          {
+            feild: "Rent anything",
+          },
+          {
+            feild: "Managment system for Advertisements",
+          },
+        ],
+      },
+    ],
   },
 ];
