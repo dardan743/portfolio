@@ -13,6 +13,8 @@ import keyboard from "assets/images/keyboard.png";
 import headphones from "assets/images/headphones.png";
 
 const CSGO = () => {
+  const [copiedM, setCopiedM] = React.useState(false);
+  const copyM = () => setCopiedM(true);
   const [copiedVM, setCopiedVM] = React.useState(false);
   const copyVM = () => setCopiedVM(true);
   const [copiedCH, setCopiedCH] = React.useState(false);
@@ -43,8 +45,8 @@ const CSGO = () => {
             <p>Mouse</p>
           </div>
           <div className="flex items-center gap-2">
-            <p>{copiedVM ? "Copied" : "Copy"}</p>
-            <CopyToClipboard text="sensitivity 1.5;" onCopy={copyVM}>
+            <p>{copiedM ? "Copied" : "Copy"}</p>
+            <CopyToClipboard text="sensitivity 1.5;" onCopy={copyM}>
               <MdOutlineCopyAll size={25} className="cursor-pointer	" />
             </CopyToClipboard>
           </div>

@@ -17,17 +17,23 @@ const Navigation = () => {
   return (
     <>
       <div className="dashboard_navigation">
-        <button className="sidebar_toggle">
-          {sidebar_toggle ? (
-            <RiMenuUnfoldFill
-              onClick={() => dispatch(toggleSidebar(!sidebar_toggle))}
-            />
-          ) : (
-            <RiMenuFoldLine
-              onClick={() => dispatch(toggleSidebar(!sidebar_toggle))}
-            />
-          )}
-        </button>
+        <div className="flex items-center">
+          <button className="sidebar_toggle">
+            {sidebar_toggle ? (
+              <RiMenuUnfoldFill
+                onClick={() => dispatch(toggleSidebar(!sidebar_toggle))}
+              />
+            ) : (
+              <RiMenuFoldLine
+                onClick={() => dispatch(toggleSidebar(!sidebar_toggle))}
+              />
+            )}
+          </button>
+          <p className="capitalize">
+            {window.location.pathname.split("/")?.[1]}
+          </p>
+        </div>
+
         <div className="dashboard_navigation_icons">
           {/* <Player url={Song} /> */}
           <p>Swag</p>

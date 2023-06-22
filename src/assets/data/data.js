@@ -500,10 +500,10 @@ export const dashbaord = [
             feild: "Vala: 14 EUR",
           },
           {
-            feild: "Credit Gjirafa: 137 EUR - Shum totale = 1,640 EUR",
+            feild: "Credit Gjirafa: 137 EUR = 1,640 EUR",
           },
           {
-            feild: "Credit Neptun: 15 EUR - Shum totale = 338 EUR",
+            feild: "Credit Neptun: 15 EUR = 338 EUR",
           },
           {
             feild: "Tjerat: 300 EUR",
