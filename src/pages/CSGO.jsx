@@ -3,6 +3,9 @@ import { RxCrosshair2 } from "react-icons/rx";
 import { FaRegHandPaper } from "react-icons/fa";
 import { MdOutlineCopyAll, MdOutlineRocketLaunch } from "react-icons/md";
 import { FiBox } from "react-icons/fi";
+import { RiComputerLine } from "react-icons/ri";
+import { BsMouse2 } from "react-icons/bs";
+
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import benq from "assets/images/benq.png";
 import mouse from "assets/images/mouse.png";
@@ -19,16 +22,54 @@ const CSGO = () => {
 
   const Sector = ({ img, title, text, desc }) => (
     <div>
-      {img && <img src={img} alt="" className="w-[150px]" />}
-      {desc && <span className="text-gray font-[800] text-center">{desc}</span>}
-      <p className="text-gray font-[500]">{title}</p>
-      <span className="text-gray font-[800] text-center">{text}</span>
+      <div className="flex items-center flex-col">
+        {img && <img src={img} alt="" className="w-[150px]" />}
+        {desc && (
+          <span className="text-gray font-[800] text-center">{desc}</span>
+        )}
+      </div>
+
+      {title && <p className="text-gray font-[500]">{title}</p>}
+      {text && <span className="text-gray font-[800]">{text}</span>}
     </div>
   );
 
   return (
-    <div>
+    <>
       <div className="bg-white p-5">
+        <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
+          <div className="flex items-center gap-2">
+            <BsMouse2 size={25} />
+            <p>Mouse</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <p>{copiedVM ? "Copied" : "Copy"}</p>
+            <CopyToClipboard text="sensitivity 1.5;" onCopy={copyVM}>
+              <MdOutlineCopyAll size={25} className="cursor-pointer	" />
+            </CopyToClipboard>
+          </div>
+        </div>
+        <p className="border-b-2 border-[#eee] pt-3 pb-3">Video</p>
+        <div className="flex items-center gap-14 pt-5 flex-wrap">
+          <Sector title="DPI" text="400" />
+          <Sector title="Sensitivity" text="1.5" />
+          <Sector title="eDPI" text="1236" />
+          <Sector title="Zoom Sensitivity" text="1" />
+          <Sector title="Hz" text="1000" />
+          <Sector title="Windows Sensitivity" text="6" />
+          <Sector title="Raw Input" text="1" />
+          <Sector title="Mouse Acceleration" text="0" />
+        </div>
+        <p className="border-b-2 border-[#eee] pt-3 pb-3">Advanced Video</p>
+        <div className="flex items-center gap-14 pt-5 flex-wrap">
+          <Sector title="Global Shadow Quality" text="Very Low" />
+          <Sector title="Model / Texture Detail" text="Low" />
+          <Sector title="Texture Streaming" text="Disabled" />
+          <Sector title="Effect Detail" text="Low" />
+        </div>
+      </div>
+
+      <div className="bg-white p-5 mt-5">
         <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
           <div className="flex items-center gap-2">
             <FaRegHandPaper size={25} />
@@ -94,24 +135,24 @@ const CSGO = () => {
           </div>
           <div className="flex items-center gap-2">
             <p>{copiedLO ? "Copied" : "Copy"}</p>
-            <CopyToClipboard text="" onCopy={copyLO}>
+            <CopyToClipboard
+              text="-freq 240 -novid -console -tickrate 128 +fps_max 400 -allow_third_party_software +clientport 27022"
+              onCopy={copyLO}
+            >
               <MdOutlineCopyAll size={25} className="cursor-pointer	" />
             </CopyToClipboard>
           </div>
         </div>
         <div className="flex items-center gap-14 pt-5 flex-wrap">
-          <Sector
-            title={" "}
-            text="-freq 240 -novid -console -tickrate 128 +fps_max 400 -allow_third_party_software +clientport 27022"
-          />
+          <Sector text="-freq 240 -novid -console -tickrate 128 +fps_max 400 -allow_third_party_software +clientport 27022" />
         </div>
       </div>
 
       <div className="bg-white p-5 mt-5">
         <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
           <div className="flex items-center gap-2">
-            <FiBox size={25} />
-            <p>Gear</p>
+            <RiComputerLine size={25} />
+            <p>Video Settings</p>
           </div>
           <div className="flex items-center gap-2">
             <p>{copiedLO ? "Copied" : "Copy"}</p>
@@ -121,21 +162,30 @@ const CSGO = () => {
           </div>
         </div>
         <div className="flex items-center gap-14 pt-5 flex-wrap">
-          <Sector img={benq} title={" "} desc="BenQ Zowie XL2566K" />
-          <Sector
-            img={mouse}
-            title={" "}
-            desc="Logitech G Pro X Superlight Red"
-          />
-          <Sector img={keyboard} title={" "} text="Logitech G715" />
-          <Sector
-            img={headphones}
-            title={" "}
-            desc="Logitech G Pro X Headset"
-          />
+          <Sector title="Resolution" text="1280x960" />
+          <Sector title="Aspect Ratio" text="4:3" />
+          <Sector title="Scaling Mode" text="Stretched" />
+          <Sector title="Color Mode" text="Computer Monitor" />
+          <Sector title="Brightness" text="80%" />
+          <Sector title="Display Mode" text="Fullscreen" />
         </div>
       </div>
-    </div>
+
+      <div className="bg-white p-5 mt-5">
+        <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
+          <div className="flex items-center gap-2">
+            <FiBox size={25} />
+            <p>Gear</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-14 pt-5 flex-wrap">
+          <Sector img={benq} desc="BenQ Zowie XL2566K" />
+          <Sector img={mouse} desc="Logitech G Pro X Superlight Red" />
+          <Sector img={keyboard} desc="Logitech G715" />
+          <Sector img={headphones} desc="Logitech G Pro X Headset" />
+        </div>
+      </div>
+    </>
   );
 };
 
