@@ -612,7 +612,10 @@ export const dashbaord = [
             feild: "Rent a Car",
           },
           {
-            feild: "Managment system for Advertisements",
+            feild: "Advertisements Managment system",
+          },
+          {
+            feild: "Barber Shop Managment system",
           },
         ],
       },
@@ -634,7 +637,29 @@ export const dashbaord = [
             feild: "Rent anything",
           },
           {
-            feild: "Managment system for Advertisements",
+            feild: "Advertisements Managment system",
+          },
+          {
+            feild: "Barber Shop Managment system",
+          },
+        ],
+      },
+      {
+        title: "Watching Ads",
+        points: [
+          {
+            feild: "Inboxdollars.com",
+          },
+          {
+            feild: "mypoints.com",
+          },
+        ],
+      },
+      {
+        title: "Amazon FBA or Afiliate Marketing",
+        points: [
+          {
+            feild: "https://affiliate-program.amazon.com",
           },
         ],
       },
