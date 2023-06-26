@@ -14,6 +14,12 @@ const Header = ({ t }) => {
   const changeLanguage = (e) => i18next.changeLanguage(e.target.value);
   const [showModal, setShowModal] = useState(false);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal(true);
+    }, 5000);
+  }, []);
+
   const stickyHeaderFunc = () => {
     window.addEventListener("scroll", () => {
       if (
