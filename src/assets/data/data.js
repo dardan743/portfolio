@@ -95,6 +95,17 @@ export const sidebarLinks = [
       // },
     ],
   },
+  {
+    title: "WIFE",
+    children: [
+      {
+        id: "aurora",
+        icon: <SiCounterstrike />,
+        link: "Aurora",
+        url: ROUTES.AURORA,
+      },
+    ],
+  },
 ];
 
 const category = {
@@ -664,5 +675,58 @@ export const dashbaord = [
         ],
       },
     ],
+  },
+];
+
+export const aurora = [
+  {
+    mainTitle: "Movies & TV Series",
+    section: [
+      {
+        title: "Dadi ❤️‍🔥🥰",
+        points: [
+          {
+            feild: "Disturbia",
+          },
+          {
+            feild: "Thirteen lives",
+          },
+          {
+            feild: "Beyond Borders",
+          },
+          {
+            feild: "Focus",
+          },
+          {
+            feild: "Django",
+          },
+          {
+            feild: "Snowpeircer",
+          },
+          {
+            feild: "Ride Along",
+          },
+          {
+            feild: "Me Before You",
+          },
+          {
+            feild: "Project X",
+          },
+          {
+            feild: "Notebook",
+          },
+          {
+            feild: "Bad mom",
+          },
+          {
+            feild: "The Pacifier",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    mainTitle: "Payments",
+    section: [],
   },
 ];

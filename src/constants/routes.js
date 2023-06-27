@@ -1,4 +1,5 @@
 export const HOME = "/";
+export const AURORA = "/aurora";
 export const CSGO = "/csgo";
 export const PUBG = "/pubg";
 export const FORTNITE = "/fortnite";
