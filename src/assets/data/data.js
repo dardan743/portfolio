@@ -52,11 +52,10 @@ import en from "assets/flags/uk.jpg";
 // https://github.com/dardan743/react-dashboard-template
 
 import { MdOutlineDashboard } from "react-icons/md";
-import {
-  SiCounterstrike,
-  // SiPubg
-} from "react-icons/si";
-// import { TbBrandFortnite } from "react-icons/tb";
+import { SiCounterstrike, SiPubg } from "react-icons/si";
+import { TbBrandFortnite } from "react-icons/tb";
+import Aurora from "assets/images/aurora.jpg";
+import Dardan from "assets/images/kk.png";
 
 import * as ROUTES from "constants/routes";
 
@@ -73,6 +72,26 @@ export const sidebarLinks = [
     ],
   },
   {
+    title: "Members",
+    permissions: ["KING"],
+    children: [
+      {
+        id: "wife",
+        icon: null,
+        img: Aurora,
+        link: "Aurora 🔐",
+        url: ROUTES.AURORA,
+      },
+      {
+        id: "me",
+        icon: null,
+        img: Dardan,
+        link: "Dardan 🔐",
+        url: ROUTES.DARDAN,
+      },
+    ],
+  },
+  {
     title: "GAME SETTINGS",
     children: [
       {
@@ -81,28 +100,17 @@ export const sidebarLinks = [
         link: "CSGO",
         url: ROUTES.CSGO,
       },
-      // {
-      //   id: "fortnite",
-      //   icon: <TbBrandFortnite />,
-      //   link: "Fortnite",
-      //   url: ROUTES.DASHBOARD,
-      // },
-      // {
-      //   id: "p[ubg",
-      //   icon: <SiPubg />,
-      //   link: "PUBG",
-      //   url: ROUTES.DASHBOARD,
-      // },
-    ],
-  },
-  {
-    title: "WIFE",
-    children: [
       {
-        id: "aurora",
-        icon: <SiCounterstrike />,
-        link: "Aurora",
-        url: ROUTES.AURORA,
+        id: "fortnite",
+        icon: <TbBrandFortnite />,
+        link: "Fortnite",
+        url: ROUTES.DASHBOARD,
+      },
+      {
+        id: "p[ubg",
+        icon: <SiPubg />,
+        link: "PUBG",
+        url: ROUTES.DASHBOARD,
       },
     ],
   },
@@ -495,6 +503,85 @@ export const dashbaord = [
       },
     ],
   },
+];
+
+export const aurora = [
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
+];
+
+export const dardan = [
+  {
+    mainTitle: "Ideas",
+    section: [
+      {
+        title: "Web Appplications",
+        points: [
+          {
+            feild: "Ecommerce",
+          },
+          {
+            feild: "Rent anything",
+          },
+          {
+            feild: "Rent a Car",
+          },
+          {
+            feild: "Advertisements Managment system",
+          },
+          {
+            feild: "Barber Shop Managment system",
+          },
+        ],
+      },
+      {
+        title: "Mobile Appplications",
+        points: [
+          {
+            feild: "Ecommerce",
+          },
+          {
+            feild: "Rent anything",
+          },
+        ],
+      },
+      {
+        title: "Desktop Appplications",
+        points: [
+          {
+            feild: "Rent anything",
+          },
+          {
+            feild: "Advertisements Managment system",
+          },
+          {
+            feild: "Barber Shop Managment system",
+          },
+        ],
+      },
+      {
+        title: "Watching Ads",
+        points: [
+          {
+            feild: "Inboxdollars.com",
+          },
+          {
+            feild: "mypoints.com",
+          },
+        ],
+      },
+      {
+        title: "Amazon FBA or Afiliate Marketing",
+        points: [
+          {
+            feild: "https://affiliate-program.amazon.com",
+          },
+        ],
+      },
+    ],
+  },
   {
     mainTitle: "Payments",
     section: [
@@ -606,127 +693,5 @@ export const dashbaord = [
         ],
       },
     ],
-  },
-  {
-    mainTitle: "Ideas",
-    section: [
-      {
-        title: "Web Appplications",
-        points: [
-          {
-            feild: "Ecommerce",
-          },
-          {
-            feild: "Rent anything",
-          },
-          {
-            feild: "Rent a Car",
-          },
-          {
-            feild: "Advertisements Managment system",
-          },
-          {
-            feild: "Barber Shop Managment system",
-          },
-        ],
-      },
-      {
-        title: "Mobile Appplications",
-        points: [
-          {
-            feild: "Ecommerce",
-          },
-          {
-            feild: "Rent anything",
-          },
-        ],
-      },
-      {
-        title: "Desktop Appplications",
-        points: [
-          {
-            feild: "Rent anything",
-          },
-          {
-            feild: "Advertisements Managment system",
-          },
-          {
-            feild: "Barber Shop Managment system",
-          },
-        ],
-      },
-      {
-        title: "Watching Ads",
-        points: [
-          {
-            feild: "Inboxdollars.com",
-          },
-          {
-            feild: "mypoints.com",
-          },
-        ],
-      },
-      {
-        title: "Amazon FBA or Afiliate Marketing",
-        points: [
-          {
-            feild: "https://affiliate-program.amazon.com",
-          },
-        ],
-      },
-    ],
-  },
-];
-
-export const aurora = [
-  {
-    mainTitle: "Movies & TV Series",
-    section: [
-      {
-        title: "Dadi ❤️‍🔥🥰",
-        points: [
-          {
-            feild: "Disturbia",
-          },
-          {
-            feild: "Thirteen lives",
-          },
-          {
-            feild: "Beyond Borders",
-          },
-          {
-            feild: "Focus",
-          },
-          {
-            feild: "Django",
-          },
-          {
-            feild: "Snowpeircer",
-          },
-          {
-            feild: "Ride Along",
-          },
-          {
-            feild: "Me Before You",
-          },
-          {
-            feild: "Project X",
-          },
-          {
-            feild: "Notebook",
-          },
-          {
-            feild: "Bad mom",
-          },
-          {
-            feild: "The Pacifier",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
   },
 ];

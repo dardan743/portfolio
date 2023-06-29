@@ -21,6 +21,8 @@ function App() {
           component={PAGES.DASHBOARD}
         />
         <DashboardRoute exact path={ROUTES.AURORA} component={PAGES.AURORA} />
+        <DashboardRoute exact path={ROUTES.AURORA} component={PAGES.AURORA} />
+        <DashboardRoute exact path={ROUTES.DARDAN} component={PAGES.DARDAN} />
         <Route exact path={ROUTES.LOADER} component={PAGES.LOADER} />
         <Redirect path="*" from="/" to={ROUTES.HOME} />
       </Switch>

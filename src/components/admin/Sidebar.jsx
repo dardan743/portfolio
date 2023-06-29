@@ -13,31 +13,45 @@ const AdminSidebar = () => {
         D
       </span>
 
-      {sidebarLinks.map((link, i) => (
-        <div className="admin_sidebar_content" key={i}>
-          <p className="menu_title">{link.title}</p>
-          {link.children.map((item) => (
-            <div className="admin_sidebar_menu" key={item.id}>
-              {/* <Tooltip
+      {sidebarLinks.map((link, i) => {
+        return (
+          <div className="admin_sidebar_content" key={i}>
+            <p className="menu_title">{link.title}</p>
+            {link.children.map((item) => (
+              <div className="admin_sidebar_menu" key={item.id}>
+                {/* <Tooltip
                 title={item.link}
                 placement="right"
                 disableHoverListener={!sidebar_toggle}
               > */}
-              <NavLink
-                to={item.url}
-                activeClassName="adminActiveLink"
-                className="sidebar_link"
-              >
-                <div className="flexed_div">
-                  {item.icon}
-                  <span>{item.link}</span>
-                </div>
-              </NavLink>
-              {/* </Tooltip> */}
-            </div>
-          ))}
-        </div>
-      ))}
+                <NavLink
+                  to={item.url}
+                  activeClassName="adminActiveLink"
+                  className="sidebar_link"
+                >
+                  <div className="flexed_div">
+                    {item.img && (
+                      <img
+                        src={item.img}
+                        alt=""
+                        style={{
+                          display: "block",
+                          width: 30,
+                          height: 30,
+                          borderRadius: "50%",
+                        }}
+                      />
+                    )}
+                    {item.icon && item.icon}
+                    <span>{item.link}</span>
+                  </div>
+                </NavLink>
+                {/* </Tooltip> */}
+              </div>
+            ))}
+          </div>
+        );
+      })}
     </div>
   );
 };
