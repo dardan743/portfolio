@@ -5,14 +5,20 @@ import { toggleSidebar } from "redux/actions/sidebarAction";
 import Avatar from "@mui/material/Avatar";
 import me from "assets/images/kk.png";
 import { Dialog, Transition } from "@headlessui/react";
+import secureLocalStorage from "react-secure-storage";
 
 const Navigation = () => {
   const dispatch = useDispatch();
   const sidebar_toggle = useSelector((state) => state.sidebarState.toggle);
+  const [keyword, setKeyword] = useState("");
 
   let [isOpen, setIsOpen] = useState(false);
-  const closeModal = () => setIsOpen(false);
+  const closeModal = () => {
+    secureLocalStorage.setItem("magic_word", keyword);
+    setIsOpen(false);
+  };
   const openModal = () => setIsOpen(true);
+  const magic_word = secureLocalStorage.getItem("magic_word");
 
   return (
     <>
@@ -33,7 +39,7 @@ const Navigation = () => {
             {window.location.pathname.split("/")?.[1]}
           </p>
         </div>
-
+        MAGIC WORD ON: {magic_word === "Dardan" ? "YES" : "NO"}
         <div className="dashboard_navigation_icons">
           {/* <Player url={Song} /> */}
           <p>Swag</p>
@@ -71,28 +77,61 @@ const Navigation = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    Payment successful
-                  </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
-                  </div>
+                  {magic_word !== null && (
+                    <>
+                      <Dialog.Title
+                        as="h3"
+                        className="text-lg text-center font-medium leading-6 text-gray-900"
+                      >
+                        Your Magic Word
+                      </Dialog.Title>
+                      <div className="mt-2">
+                        <p className="text-5xl text-center text-primaryColor">
+                          Dardan
+                        </p>
+                      </div>
+                    </>
+                  )}
 
-                  <div className="mt-4">
-                    <button
-                      type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-primaryColor px-4 py-2 text-sm font-medium text-white hover:primaryColor focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
+                  {magic_word === null && (
+                    <Dialog.Title
+                      as="h3"
+                      className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      Got it, thanks!
-                    </button>
-                  </div>
+                      Magic Word
+                    </Dialog.Title>
+                  )}
+
+                  {magic_word === null && (
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-500">
+                        Use your magic key to unlock ur information!
+                      </p>
+                    </div>
+                  )}
+                  {magic_word === null && (
+                    <input
+                      className="border-2 border-[#eee] p-2 w-[100%] rounded-2xl mt-2"
+                      value={keyword}
+                      onChange={(e) => setKeyword(e.target.value)}
+                      placeholder="Magic Word"
+                      // readOnly={magic_word !== null ? true : false}
+                      // disabled={magic_word !== "" ? true : false}
+                    />
+                  )}
+
+                  {magic_word === null && (
+                    <div className="mt-4">
+                      <button
+                        disabled={keyword.length > 4 ? false : true}
+                        type="button"
+                        className="inline-flex justify-center rounded-md border border-transparent bg-primaryColor px-4 py-2 text-sm font-medium text-white hover:primaryColor focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        onClick={closeModal}
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  )}
                 </Dialog.Panel>
               </Transition.Child>
             </div>

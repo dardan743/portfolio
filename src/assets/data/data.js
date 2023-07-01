@@ -73,7 +73,6 @@ export const sidebarLinks = [
   },
   {
     title: "Members",
-    permissions: ["KING"],
     children: [
       {
         id: "wife",
@@ -81,6 +80,7 @@ export const sidebarLinks = [
         img: Aurora,
         link: "Aurora 🔐",
         url: ROUTES.AURORA,
+        magic_word: "aurora",
       },
       {
         id: "me",
@@ -88,6 +88,7 @@ export const sidebarLinks = [
         img: Dardan,
         link: "Dardan 🔐",
         url: ROUTES.DARDAN,
+        magic_word: "dardan",
       },
     ],
   },
@@ -613,9 +614,6 @@ export const dardan = [
         points: [
           {
             feild: "Gulii: 200 EUR",
-          },
-          {
-            feild: "Granit: 100 EUR",
           },
         ],
       },
