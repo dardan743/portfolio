@@ -5,7 +5,7 @@ import { toggleSidebar } from "redux/actions/sidebarAction";
 import Avatar from "@mui/material/Avatar";
 import me from "assets/images/kk.png";
 import { Dialog, Transition } from "@headlessui/react";
-import secureLocalStorage from "react-secure-storage";
+// import secureLocalStorage from "react-secure-storage";
 
 const Navigation = () => {
   const dispatch = useDispatch();
@@ -13,12 +13,15 @@ const Navigation = () => {
   const [keyword, setKeyword] = useState("");
 
   let [isOpen, setIsOpen] = useState(false);
-  const closeModal = () => {
-    secureLocalStorage.setItem("magic_word", keyword);
-    setIsOpen(false);
-  };
   const openModal = () => setIsOpen(true);
-  const magic_word = secureLocalStorage.getItem("magic_word");
+  const closeModal = () => setIsOpen(false);
+  const obj = JSON.parse(localStorage.getItem("magic_word"));
+
+  const phrase = {
+    magic: keyword,
+    img: me,
+    fullName: "Dardan LLapashtica",
+  };
 
   return (
     <>
@@ -39,7 +42,7 @@ const Navigation = () => {
             {window.location.pathname.split("/")?.[1]}
           </p>
         </div>
-        MAGIC WORD ON: {magic_word === "Dardan" ? "YES" : "NO"}
+        MAGIC WORD ON: {obj?.magic === "Dardan" ? "YES" : "NO"}
         <div className="dashboard_navigation_icons">
           {/* <Player url={Song} /> */}
           <p>Swag</p>
@@ -77,7 +80,7 @@ const Navigation = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  {magic_word !== null && (
+                  {obj.magic !== null && (
                     <>
                       <Dialog.Title
                         as="h3"
@@ -93,7 +96,7 @@ const Navigation = () => {
                     </>
                   )}
 
-                  {magic_word === null && (
+                  {obj.magic === null && (
                     <Dialog.Title
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
@@ -102,31 +105,37 @@ const Navigation = () => {
                     </Dialog.Title>
                   )}
 
-                  {magic_word === null && (
+                  {obj.magic === null && (
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
                         Use your magic key to unlock ur information!
                       </p>
                     </div>
                   )}
-                  {magic_word === null && (
+                  {obj.magic === null && (
                     <input
                       className="border-2 border-[#eee] p-2 w-[100%] rounded-2xl mt-2"
                       value={keyword}
                       onChange={(e) => setKeyword(e.target.value)}
                       placeholder="Magic Word"
-                      // readOnly={magic_word !== null ? true : false}
-                      // disabled={magic_word !== "" ? true : false}
+                      // readOnly={obj.magic !== null ? true : false}
+                      // disabled={obj.magic !== "" ? true : false}
                     />
                   )}
 
-                  {magic_word === null && (
+                  {obj.magic === null && (
                     <div className="mt-4">
                       <button
                         disabled={keyword.length > 4 ? false : true}
                         type="button"
                         className="inline-flex justify-center rounded-md border border-transparent bg-primaryColor px-4 py-2 text-sm font-medium text-white hover:primaryColor focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                        onClick={closeModal}
+                        onClick={() => {
+                          localStorage.setItem(
+                            "magic_word",
+                            JSON.stringify(phrase)
+                          );
+                          setIsOpen(false);
+                        }}
                       >
                         Submit
                       </button>

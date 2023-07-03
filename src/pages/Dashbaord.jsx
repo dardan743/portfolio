@@ -33,8 +33,9 @@ const Dashbaord = () => {
 
   return (
     <div className="flex justify-start flex-wrap gap-5 mb-5">
-      {dashbaord?.map((item) => (
+      {dashbaord?.map((item, i) => (
         <div
+          key={i}
           ref={elRef}
           className={`bg-white p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px]`}
         >
