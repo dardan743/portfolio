@@ -599,7 +599,7 @@ export const dardan = [
             feild: "Vala: 14 €",
           },
           {
-            feild: "Credit Gjirafa: 148 € = 1,770 €",
+            feild: "Credit Gjirafa: 140 € = 1688 €",
           },
           {
             feild: "Credit Neptun: 15 € = 338 €",
@@ -624,7 +624,7 @@ export const dardan = [
         title: "All",
         points: [
           {
-            feild: "Pagesa e kredise per muaj: 163 €",
+            feild: "Pagesa e kredise per muaj: 150 €",
           },
           {
             feild: "Rroga: 600 €",
