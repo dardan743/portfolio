@@ -80,7 +80,7 @@ const Navigation = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  {obj.magic !== null && (
+                  {obj?.magic !== null && (
                     <>
                       <Dialog.Title
                         as="h3"
@@ -96,7 +96,7 @@ const Navigation = () => {
                     </>
                   )}
 
-                  {obj.magic === null && (
+                  {obj?.magic === null && (
                     <Dialog.Title
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
@@ -105,25 +105,25 @@ const Navigation = () => {
                     </Dialog.Title>
                   )}
 
-                  {obj.magic === null && (
+                  {obj?.magic === null && (
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
                         Use your magic key to unlock ur information!
                       </p>
                     </div>
                   )}
-                  {obj.magic === null && (
+                  {obj?.magic === null && (
                     <input
                       className="border-2 border-[#eee] p-2 w-[100%] rounded-2xl mt-2"
                       value={keyword}
                       onChange={(e) => setKeyword(e.target.value)}
                       placeholder="Magic Word"
-                      // readOnly={obj.magic !== null ? true : false}
-                      // disabled={obj.magic !== "" ? true : false}
+                      // readOnly={obj?.magic !== null ? true : false}
+                      // disabled={obj?.magic !== "" ? true : false}
                     />
                   )}
 
-                  {obj.magic === null && (
+                  {obj?.magic === null && (
                     <div className="mt-4">
                       <button
                         disabled={keyword.length > 4 ? false : true}
