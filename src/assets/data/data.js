@@ -590,22 +590,22 @@ export const dardan = [
         title: "Subscriptions & Payments Monthly",
         points: [
           {
-            feild: "Snapchat Premium: 0.50 CENT",
+            feild: "Snapchat Premium: 0.50 €",
           },
           {
-            feild: "Spotify: 6.50 EUR - 16th of every month",
+            feild: "Spotify: 6.50 € - 16th of every month",
           },
           {
-            feild: "Vala: 14 EUR",
+            feild: "Vala: 14 €",
           },
           {
-            feild: "Credit Gjirafa: 148 EUR = 1,770 EUR",
+            feild: "Credit Gjirafa: 148 € = 1,770 €",
           },
           {
-            feild: "Credit Neptun: 15 EUR = 338 EUR",
+            feild: "Credit Neptun: 15 € = 338 €",
           },
           {
-            feild: "Tjerat: 300 EUR",
+            feild: "Tjerat: 300 €",
           },
         ],
       },
@@ -613,7 +613,10 @@ export const dardan = [
         title: "Borxh",
         points: [
           {
-            feild: "Gulii: 200 EUR",
+            feild: "Gulii: 200 €",
+          },
+          {
+            feild: "To Anisa: 270 £",
           },
         ],
       },
@@ -621,16 +624,16 @@ export const dardan = [
         title: "All",
         points: [
           {
-            feild: "Pagesa e kredise per muaj: 163 EUR",
+            feild: "Pagesa e kredise per muaj: 163 €",
           },
           {
-            feild: "Rroga: 600 EUR",
+            feild: "Rroga: 600 €",
           },
           {
-            feild: "Kursimet: 100 EUR",
+            feild: "Kursimet: 100 €",
           },
           {
-            feild: "Totali i borxhit: 200 EUR",
+            feild: "Totali i borxhit: 200 €",
           },
         ],
       },
