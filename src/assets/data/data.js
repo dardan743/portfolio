@@ -52,8 +52,11 @@ import en from "assets/flags/uk.jpg";
 // https://github.com/dardan743/react-dashboard-template
 
 import { MdOutlineDashboard } from "react-icons/md";
-import { SiCounterstrike, SiPubg } from "react-icons/si";
-import { TbBrandFortnite } from "react-icons/tb";
+import {
+  SiCounterstrike,
+  // SiPubg
+} from "react-icons/si";
+// import { TbBrandFortnite } from "react-icons/tb";
 import Aurora from "assets/images/aurora.jpg";
 import Dardan from "assets/images/kk.png";
 
@@ -101,18 +104,18 @@ export const sidebarLinks = [
         link: "CSGO",
         url: ROUTES.CSGO,
       },
-      {
-        id: "fortnite",
-        icon: <TbBrandFortnite />,
-        link: "Fortnite",
-        url: ROUTES.DASHBOARD,
-      },
-      {
-        id: "p[ubg",
-        icon: <SiPubg />,
-        link: "PUBG",
-        url: ROUTES.DASHBOARD,
-      },
+      // {
+      //   id: "fortnite",
+      //   icon: <TbBrandFortnite />,
+      //   link: "Fortnite",
+      //   url: ROUTES.DASHBOARD,
+      // },
+      // {
+      //   id: "p[ubg",
+      //   icon: <SiPubg />,
+      //   link: "PUBG",
+      //   url: ROUTES.DASHBOARD,
+      // },
     ],
   },
 ];

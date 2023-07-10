@@ -6,9 +6,11 @@ import Avatar from "@mui/material/Avatar";
 import me from "assets/images/kk.png";
 import { Dialog, Transition } from "@headlessui/react";
 // import secureLocalStorage from "react-secure-storage";
+import { useThemeSwitcher } from "hooks";
 
 const Navigation = () => {
   const dispatch = useDispatch();
+  const ToggleView = useThemeSwitcher();
   const sidebar_toggle = useSelector((state) => state.sidebarState.toggle);
   const [keyword, setKeyword] = useState("");
 
@@ -45,6 +47,7 @@ const Navigation = () => {
         MAGIC WORD ON: {obj?.magic === "Dardan" ? "YES" : "NO"}
         <div className="dashboard_navigation_icons">
           {/* <Player url={Song} /> */}
+          {ToggleView}
           <p>Swag</p>
           <Avatar
             alt="DLL"

@@ -5,6 +5,8 @@ const Dashbaord = () => {
   const elRef = useRef();
   const [height, setHeight] = useState(0);
 
+  const mode = localStorage.getItem("mode");
+
   useEffect(() => {
     if (!elRef?.current?.clientHeight) {
       return;
@@ -37,7 +39,11 @@ const Dashbaord = () => {
         <div
           key={i}
           ref={elRef}
-          className={`bg-white p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px]`}
+          className={
+            mode == "light"
+              ? `bg-white p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px]`
+              : `bg-borderDarkColor p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px]`
+          }
         >
           <h1 className="text-gray font-[800] text-3xl mb-3">
             {item.mainTitle}

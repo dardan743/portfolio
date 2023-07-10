@@ -13,6 +13,7 @@ import keyboard from "assets/images/keyboard.png";
 import headphones from "assets/images/headphones.png";
 
 const CSGO = () => {
+  const mode = localStorage.getItem("mode");
   const [copiedM, setCopiedM] = React.useState(false);
   const copyM = () => setCopiedM(true);
   const [copiedVM, setCopiedVM] = React.useState(false);
@@ -38,7 +39,9 @@ const CSGO = () => {
 
   return (
     <>
-      <div className="bg-white p-5">
+      <div
+        className={mode == "light" ? "bg-white p-5" : "bg-borderDarkColor p-5"}
+      >
         <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
           <div className="flex items-center gap-2">
             <BsMouse2 size={25} />
@@ -63,7 +66,11 @@ const CSGO = () => {
         </div>
       </div>
 
-      <div className="bg-white p-5 mt-5">
+      <div
+        className={
+          mode == "light" ? "bg-white p-5 mt-5" : "bg-borderDarkColor p-5 mt-5"
+        }
+      >
         <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
           <div className="flex items-center gap-2">
             <FaRegHandPaper size={25} />
@@ -95,7 +102,11 @@ const CSGO = () => {
         </div>
       </div>
 
-      <div className="bg-white p-5 mt-5">
+      <div
+        className={
+          mode == "light" ? "bg-white p-5 mt-5" : "bg-borderDarkColor p-5 mt-5"
+        }
+      >
         <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
           <div className="flex items-center gap-2">
             <RxCrosshair2 size={25} />
@@ -121,7 +132,11 @@ const CSGO = () => {
         </div>
       </div>
 
-      <div className="bg-white p-5 mt-5">
+      <div
+        className={
+          mode == "light" ? "bg-white p-5 mt-5" : "bg-borderDarkColor p-5 mt-5"
+        }
+      >
         <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
           <div className="flex items-center gap-2">
             <MdOutlineRocketLaunch size={25} />
@@ -142,7 +157,11 @@ const CSGO = () => {
         </div>
       </div>
 
-      <div className="bg-white p-5 mt-5">
+      <div
+        className={
+          mode == "light" ? "bg-white p-5 mt-5" : "bg-borderDarkColor p-5 mt-5"
+        }
+      >
         <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
           <div className="flex items-center gap-2">
             <RiComputerLine size={25} />
@@ -167,7 +186,11 @@ const CSGO = () => {
         </div>
       </div>
 
-      <div className="bg-white p-5 mt-5">
+      <div
+        className={
+          mode == "light" ? "bg-white p-5 mt-5" : "bg-borderDarkColor p-5 mt-5"
+        }
+      >
         <div className="flex items-center justify-between border-b-2 border-[#eee] pb-5">
           <div className="flex items-center gap-2">
             <FiBox size={25} />

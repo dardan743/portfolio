@@ -2,11 +2,16 @@ import React from "react";
 import { dardan } from "assets/data/data";
 
 const Dardan = () => {
+  const mode = localStorage.getItem("mode");
   return (
     <div className="flex justify-start flex-wrap gap-5 mb-5">
       {dardan?.map((item) => (
         <div
-          className={`bg-white p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px]`}
+          className={
+            mode == "light"
+              ? `bg-white p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px]`
+              : `bg-borderDarkColor p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px]`
+          }
         >
           <h1 className="text-gray font-[800] text-3xl mb-3">
             {item.mainTitle}

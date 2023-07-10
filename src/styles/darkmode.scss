@@ -1,8 +1,8 @@
-$primary_dark_color: #252525;
-$primary_text_color: #f3f3f3;
+$primary_dark_color: #0f0f0f;
+$secondary_dark_color: #272727;
+$primary_text_color: #dadada;
 $scrollbar-color: #ff4141;
-$secondary_dark_color: #292929;
-$border-c: #2e2e2e;
+$border-color: #3f3f3f;
 
 body.dark-mode {
   background: $primary_dark_color;
@@ -17,4 +17,44 @@ body.dark-mode::-webkit-scrollbar {
 body.dark-mode::-webkit-scrollbar-thumb {
   background-color: $scrollbar-color;
   border-radius: 10px;
+}
+
+body.dark-mode .admin_dashboard {
+  .admin_sidebar {
+    background: $secondary_dark_color;
+    color: $primary_text_color;
+    border-right: 1px solid $border-color;
+
+    .admin_sidebar_content {
+      .admin_sidebar_menu {
+        .sidebar_link {
+          color: $primary_text_color;
+          &:hover {
+            background: $border-color;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            svg {
+              color: #ff4141;
+            }
+          }
+        }
+        .adminActiveLink {
+          background: $border-color;
+          color: $primary_text_color;
+        }
+      }
+    }
+  }
+  .admin_dashboard_content {
+    background: $secondary_dark_color;
+    .dashboard_navigation {
+      background: $secondary_dark_color;
+      color: $primary_text_color;
+      border-bottom: 1px solid $border-color;
+    }
+    .admin_dashboard_content_wrapper {
+      // background: $secondary_dark_color;
+      // background: $border-color;
+    }
+  }
 }
