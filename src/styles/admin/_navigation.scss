@@ -27,14 +27,15 @@
     align-items: center;
     gap: 15px;
     svg {
-      font-size: 30px;
+      font-size: 35px;
       cursor: pointer;
-      color: #777;
+      color: #ff4141;
       @include bezier-transition(all, 0.2s, ease-in-out);
       &:hover {
-        background: #eee;
-        border-radius: 50px;
-        padding: 3px;
+        // border: 1px solid #ff4141;
+        // border-radius: 50%;
+        background: none !important;
+        transform: scale(1.2);
       }
     }
     .profile {

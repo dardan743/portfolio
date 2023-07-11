@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { MdLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { useThemeDetector } from "hooks";
 
 function useThemeSwitcher() {
+  const isDarkTheme = useThemeDetector();
   const [mode, setMode] = useState(() => localStorage.getItem("mode"));
 
   useEffect(() => {
@@ -35,14 +37,19 @@ function useThemeSwitcher() {
   const dark = () => setMode((mode) => (mode === "dark" ? "light" : "dark"));
 
   return (
-    <button
-      onClick={mode === "dark" ? light : dark}
-      // className="text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300"
-    >
-      {mode === "dark" ? (
-        <MdLightMode size={22} />
+    // <button onClick={mode === "dark" ? light : dark}>
+    //   {mode === "dark" ? (
+    //     <MdLightMode size={22} id="switcher" />
+    //   ) : (
+    //     <MdOutlineDarkMode size={22} id="switcher" />
+    //   )}
+    // </button>
+
+    <button onClick={isDarkTheme ? dark : light}>
+      {isDarkTheme ? (
+        <MdOutlineDarkMode size={22} id="switcher" />
       ) : (
-        <MdOutlineDarkMode size={22} />
+        <MdLightMode size={22} id="switcher" />
       )}
     </button>
   );

@@ -17,7 +17,7 @@ const Navigation = () => {
   let [isOpen, setIsOpen] = useState(false);
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
-  const obj = JSON.parse(localStorage.getItem("magic_word"));
+  // const obj = JSON.parse(localStorage.getItem("magic_word"));
 
   const phrase = {
     magic: keyword,
@@ -44,7 +44,7 @@ const Navigation = () => {
             {window.location.pathname.split("/")?.[1]}
           </p>
         </div>
-        MAGIC WORD ON: {obj?.magic === "Dardan" ? "YES" : "NO"}
+        {/* MAGIC WORD ON: {obj?.magic === "Dardan" ? "YES" : "NO"} */}
         <div className="dashboard_navigation_icons">
           {/* <Player url={Song} /> */}
           {ToggleView}
@@ -83,67 +83,56 @@ const Navigation = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  {obj?.magic !== null && (
-                    <>
-                      <Dialog.Title
-                        as="h3"
-                        className="text-lg text-center font-medium leading-6 text-gray-900"
-                      >
-                        Your Magic Word
-                      </Dialog.Title>
-                      <div className="mt-2">
-                        <p className="text-5xl text-center text-primaryColor">
-                          Dardan
-                        </p>
-                      </div>
-                    </>
-                  )}
+                  <Dialog.Title
+                    as="h3"
+                    className="text-lg text-center font-medium leading-6 text-gray-900"
+                  >
+                    Your Magic Word
+                  </Dialog.Title>
+                  <div className="mt-2">
+                    <p className="text-5xl text-center text-primaryColor">
+                      Dardan
+                    </p>
+                  </div>
 
-                  {obj?.magic === null && (
-                    <Dialog.Title
-                      as="h3"
-                      className="text-lg font-medium leading-6 text-gray-900"
+                  <Dialog.Title
+                    as="h3"
+                    className="text-lg font-medium leading-6 text-gray-900"
+                  >
+                    Magic Word
+                  </Dialog.Title>
+
+                  <div className="mt-2">
+                    <p className="text-sm text-gray-500">
+                      Use your magic key to unlock ur information!
+                    </p>
+                  </div>
+
+                  <input
+                    className="border-2 border-[#eee] p-2 w-[100%] rounded-2xl mt-2"
+                    value={keyword}
+                    onChange={(e) => setKeyword(e.target.value)}
+                    placeholder="Magic Word"
+                    // readOnly={obj?.magic !== null ? true : false}
+                    // disabled={obj?.magic !== "" ? true : false}
+                  />
+
+                  <div className="mt-4">
+                    <button
+                      disabled={keyword.length > 4 ? false : true}
+                      type="button"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-primaryColor px-4 py-2 text-sm font-medium text-white hover:primaryColor focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={() => {
+                        localStorage.setItem(
+                          "magic_word",
+                          JSON.stringify(phrase)
+                        );
+                        setIsOpen(false);
+                      }}
                     >
-                      Magic Word
-                    </Dialog.Title>
-                  )}
-
-                  {obj?.magic === null && (
-                    <div className="mt-2">
-                      <p className="text-sm text-gray-500">
-                        Use your magic key to unlock ur information!
-                      </p>
-                    </div>
-                  )}
-                  {obj?.magic === null && (
-                    <input
-                      className="border-2 border-[#eee] p-2 w-[100%] rounded-2xl mt-2"
-                      value={keyword}
-                      onChange={(e) => setKeyword(e.target.value)}
-                      placeholder="Magic Word"
-                      // readOnly={obj?.magic !== null ? true : false}
-                      // disabled={obj?.magic !== "" ? true : false}
-                    />
-                  )}
-
-                  {obj?.magic === null && (
-                    <div className="mt-4">
-                      <button
-                        disabled={keyword.length > 4 ? false : true}
-                        type="button"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-primaryColor px-4 py-2 text-sm font-medium text-white hover:primaryColor focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                        onClick={() => {
-                          localStorage.setItem(
-                            "magic_word",
-                            JSON.stringify(phrase)
-                          );
-                          setIsOpen(false);
-                        }}
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  )}
+                      Submit
+                    </button>
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>

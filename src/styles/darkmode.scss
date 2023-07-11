@@ -55,6 +55,9 @@ body.dark-mode .admin_dashboard {
     .admin_dashboard_content_wrapper {
       // background: $secondary_dark_color;
       // background: $border-color;
+      #admin_bg {
+        background: $border-color;
+      }
     }
   }
 }
