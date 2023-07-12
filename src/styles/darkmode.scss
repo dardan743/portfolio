@@ -46,17 +46,16 @@ body.dark-mode .admin_dashboard {
     }
   }
   .admin_dashboard_content {
-    background: $secondary_dark_color;
+    background: $border-color;
+
     .dashboard_navigation {
       background: $secondary_dark_color;
       color: $primary_text_color;
       border-bottom: 1px solid $border-color;
     }
     .admin_dashboard_content_wrapper {
-      // background: $secondary_dark_color;
-      // background: $border-color;
       #admin_bg {
-        background: $border-color;
+        background: $secondary_dark_color;
       }
     }
   }
