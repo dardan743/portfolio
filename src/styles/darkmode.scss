@@ -9,13 +9,11 @@ body.dark-mode {
   color: $primary_text_color;
 }
 
-body.dark-mode::-webkit-scrollbar {
-  width: 8px;
-  background-color: $primary_dark_color;
+body.dark-mode *::-webkit-scrollbar {
+  width: 5px;
 }
-
-body.dark-mode::-webkit-scrollbar-thumb {
-  background-color: $scrollbar-color;
+body.dark-mode *::-webkit-scrollbar-thumb {
+  background-color: $primary_text_color;
   border-radius: 10px;
 }
 
@@ -52,6 +50,10 @@ body.dark-mode .admin_dashboard {
       background: $secondary_dark_color;
       color: $primary_text_color;
       border-bottom: 1px solid $border-color;
+      .keyword_input {
+        background: $border-color;
+        border: 1px solid $border-color;
+      }
     }
     .admin_dashboard_content_wrapper {
       #admin_bg {

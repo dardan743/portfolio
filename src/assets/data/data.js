@@ -71,6 +71,7 @@ export const sidebarLinks = [
         icon: <MdOutlineDashboard />,
         link: "Dashboard",
         url: ROUTES.DASHBOARD,
+        keyword: "all",
       },
     ],
   },
@@ -78,12 +79,12 @@ export const sidebarLinks = [
     title: "Members",
     children: [
       {
-        id: "wife",
+        id: "loli",
         icon: null,
         img: Aurora,
         link: "Aurora 🔐",
         url: ROUTES.AURORA,
-        magic_word: "aurora",
+        keyword: "all",
       },
       {
         id: "me",
@@ -91,7 +92,7 @@ export const sidebarLinks = [
         img: Dardan,
         link: "Dardan 🔐",
         url: ROUTES.DARDAN,
-        magic_word: "dardan",
+        keyword: "all",
       },
     ],
   },
@@ -103,19 +104,8 @@ export const sidebarLinks = [
         icon: <SiCounterstrike />,
         link: "CSGO",
         url: ROUTES.CSGO,
+        keyword: "all",
       },
-      // {
-      //   id: "fortnite",
-      //   icon: <TbBrandFortnite />,
-      //   link: "Fortnite",
-      //   url: ROUTES.DASHBOARD,
-      // },
-      // {
-      //   id: "p[ubg",
-      //   icon: <SiPubg />,
-      //   link: "PUBG",
-      //   url: ROUTES.DASHBOARD,
-      // },
     ],
   },
 ];
@@ -514,6 +504,42 @@ export const aurora = [
     mainTitle: "Payments",
     section: [],
   },
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
+  {
+    mainTitle: "Payments",
+    section: [],
+  },
 ];
 
 export const dardan = [
@@ -562,17 +588,6 @@ export const dardan = [
           },
           {
             feild: "Barber Shop Managment system",
-          },
-        ],
-      },
-      {
-        title: "Watching Ads",
-        points: [
-          {
-            feild: "Inboxdollars.com",
-          },
-          {
-            feild: "mypoints.com",
           },
         ],
       },
@@ -665,15 +680,6 @@ export const dardan = [
       {
         title: "Products",
         points: [
-          {
-            feild: "Sopa Brush",
-          },
-          {
-            feild: "Charger Lamp",
-          },
-          {
-            feild: "Spinner Fidget",
-          },
           {
             feild: "Spinner Airpods Case",
           },

@@ -3,11 +3,11 @@ import { aurora } from "assets/data/data";
 
 const Aurora = () => {
   return (
-    <div className="flex justify-start flex-wrap gap-5 mb-5">
+    <div className="flex justify-start flex-wrap gap-4 mb-5">
       {aurora?.map((item) => (
         <div
           id="admin_bg"
-          className={`bg-white p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px]`}
+          className={`bg-white p-5 w-[100%] h-[100%] lg:w-[300px] md:w-[300px] lg:h-[395px] md:h-[395px] overflow-y-scroll`}
         >
           <h1 className="text-gray font-[800] text-3xl mb-3">
             {item.mainTitle}

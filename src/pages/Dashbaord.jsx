@@ -38,7 +38,7 @@ const Dashbaord = () => {
           key={i}
           ref={elRef}
           id="admin_bg"
-          className={`bg-white p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px]`}
+          className={`bg-white p-5 w-[100%] h-[100%] lg:w-[340px] md:w-[340px] lg:h-[100%] md:h-[100%] overflow-y-scroll`}
         >
           <h1 className="text-gray font-[800] text-3xl mb-3">
             {item.mainTitle}

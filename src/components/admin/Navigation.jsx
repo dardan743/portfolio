@@ -7,23 +7,17 @@ import me from "assets/images/kk.png";
 import { Dialog, Transition } from "@headlessui/react";
 // import secureLocalStorage from "react-secure-storage";
 import { useThemeSwitcher } from "hooks";
+import { changeKeyword } from "redux/actions/keywordAction";
 
 const Navigation = () => {
   const dispatch = useDispatch();
   const ToggleView = useThemeSwitcher();
   const sidebar_toggle = useSelector((state) => state.sidebarState.toggle);
-  const [keyword, setKeyword] = useState("");
+  const keyword = useSelector((state) => state.keywordState.keyword);
 
   let [isOpen, setIsOpen] = useState(false);
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
-  // const obj = JSON.parse(localStorage.getItem("magic_word"));
-
-  const phrase = {
-    magic: keyword,
-    img: me,
-    fullName: "Dardan LLapashtica",
-  };
 
   return (
     <>
@@ -44,7 +38,13 @@ const Navigation = () => {
             {window.location.pathname.split("/")?.[1]}
           </p>
         </div>
-        {/* MAGIC WORD ON: {obj?.magic === "Dardan" ? "YES" : "NO"} */}
+        <input
+          value={keyword}
+          className="keyword_input bg-[#eee] border-2 border-[#eee] p-2 w-[40%] rounded-2xl mt-2"
+          placeholder="Password"
+          type="text"
+          onChange={(e) => dispatch(changeKeyword(e.target.value))}
+        />
         <div className="dashboard_navigation_icons">
           {/* <Player url={Song} /> */}
           {ToggleView}
@@ -91,48 +91,18 @@ const Navigation = () => {
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-5xl text-center text-primaryColor">
-                      Dardan
+                      {keyword}
                     </p>
                   </div>
 
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    Magic Word
-                  </Dialog.Title>
-
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Use your magic key to unlock ur information!
-                    </p>
-                  </div>
-
-                  <input
-                    className="border-2 border-[#eee] p-2 w-[100%] rounded-2xl mt-2"
-                    value={keyword}
-                    onChange={(e) => setKeyword(e.target.value)}
-                    placeholder="Magic Word"
-                    // readOnly={obj?.magic !== null ? true : false}
-                    // disabled={obj?.magic !== "" ? true : false}
-                  />
-
-                  <div className="mt-4">
+                  {/* <div className="mt-4">
                     <button
-                      disabled={keyword.length > 4 ? false : true}
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-primaryColor px-4 py-2 text-sm font-medium text-white hover:primaryColor focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={() => {
-                        localStorage.setItem(
-                          "magic_word",
-                          JSON.stringify(phrase)
-                        );
-                        setIsOpen(false);
-                      }}
                     >
                       Submit
                     </button>
-                  </div>
+                  </div> */}
                 </Dialog.Panel>
               </Transition.Child>
             </div>

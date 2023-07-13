@@ -1,1 +1,2 @@
 export const SIDEBAR_TOGGLE = "SIDEBAR_TOGGLE";
+export const CHANGE_KEYWORD = "CHANGE_KEYWORD";
