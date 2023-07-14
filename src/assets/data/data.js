@@ -57,7 +57,7 @@ import {
   // SiPubg
 } from "react-icons/si";
 // import { TbBrandFortnite } from "react-icons/tb";
-import Aurora from "assets/images/aurora.jpg";
+// import Aurora from "assets/images/aurora.jpg";
 import Dardan from "assets/images/kk.png";
 
 import * as ROUTES from "constants/routes";
@@ -78,14 +78,14 @@ export const sidebarLinks = [
   {
     title: "Members",
     children: [
-      {
-        id: "loli",
-        icon: null,
-        img: Aurora,
-        link: "Aurora 🔐",
-        url: ROUTES.AURORA,
-        keyword: "all",
-      },
+      // {
+      //   id: "loli",
+      //   icon: null,
+      //   img: Aurora,
+      //   link: "Aurora 🔐",
+      //   url: ROUTES.AURORA,
+      //   keyword: "all",
+      // },
       {
         id: "me",
         icon: null,
@@ -499,164 +499,9 @@ export const dashbaord = [
   },
 ];
 
-export const aurora = [
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-  {
-    mainTitle: "Payments",
-    section: [],
-  },
-];
+export const aurora = [];
 
 export const dardan = [
-  {
-    mainTitle: "Ideas",
-    section: [
-      {
-        title: "Web Appplications",
-        points: [
-          {
-            feild: "Ecommerce",
-          },
-          {
-            feild: "Rent anything",
-          },
-          {
-            feild: "Rent a Car",
-          },
-          {
-            feild: "Advertisements Managment system",
-          },
-          {
-            feild: "Barber Shop Managment system",
-          },
-        ],
-      },
-      {
-        title: "Mobile Appplications",
-        points: [
-          {
-            feild: "Ecommerce",
-          },
-          {
-            feild: "Rent anything",
-          },
-        ],
-      },
-      {
-        title: "Desktop Appplications",
-        points: [
-          {
-            feild: "Rent anything",
-          },
-          {
-            feild: "Advertisements Managment system",
-          },
-          {
-            feild: "Barber Shop Managment system",
-          },
-        ],
-      },
-      {
-        title: "Amazon FBA or Afiliate Marketing",
-        points: [
-          {
-            feild: "https://affiliate-program.amazon.com",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    mainTitle: "Payments",
-    section: [
-      {
-        title: "Subscriptions & Payments Monthly",
-        points: [
-          {
-            feild: "Snapchat Premium: 0.50 €",
-          },
-          {
-            feild: "Spotify: 6.50 € - 16th of every month",
-          },
-          {
-            feild: "Vala: 14 €",
-          },
-          {
-            feild: "Credit Gjirafa: 140 € = 1688 €",
-          },
-          {
-            feild: "Credit Neptun: 15 € = 338 €",
-          },
-          {
-            feild: "Tjerat: 300 €",
-          },
-        ],
-      },
-      {
-        title: "Borxh",
-        points: [
-          {
-            feild: "Gulii: 200 €",
-          },
-          {
-            feild: "To Anisa: 270 £",
-          },
-        ],
-      },
-      {
-        title: "All",
-        points: [
-          {
-            feild: "Pagesa e kredise per muaj: 150 €",
-          },
-          {
-            feild: "Rroga: 600 €",
-          },
-          {
-            feild: "Kursimet: 100 €",
-          },
-          {
-            feild: "Totali i borxhit: 200 €",
-          },
-        ],
-      },
-    ],
-  },
   {
     mainTitle: "Dropshipping",
     section: [
@@ -699,6 +544,75 @@ export const dardan = [
           },
           {
             feild: "Hellium 10",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    mainTitle: "Ideas",
+    section: [
+      {
+        title: "Appplications",
+        points: [
+          {
+            feild: "Ecommerce",
+          },
+          {
+            feild: "Rent anything",
+          },
+          {
+            feild: "Rent a Car",
+          },
+          {
+            feild: "Advertisements Managment system",
+          },
+          {
+            feild: "Barber Shop Managment system",
+          },
+        ],
+      },
+      {
+        title: "Amazon FBA or Afiliate Marketing",
+        points: [
+          {
+            feild: "https://affiliate-program.amazon.com",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    mainTitle: "Payments",
+    section: [
+      {
+        title: "Subscriptions & Payments Monthly",
+        points: [
+          {
+            feild: "Snapchat Premium: 0.50 €",
+          },
+          {
+            feild: "Spotify: 6.50 € - 16th of every month",
+          },
+          {
+            feild: "Credit Gjirafa: 140 € = 1688 €",
+          },
+          {
+            feild: "Credit Neptun: 15 € = 338 €",
+          },
+          {
+            feild: "Total Credit: 150,72 €",
+          },
+        ],
+      },
+      {
+        title: "Borxh",
+        points: [
+          {
+            feild: "Gulii: 200 €",
+          },
+          {
+            feild: "To Anisa: 270 £",
           },
         ],
       },

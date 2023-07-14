@@ -7,7 +7,7 @@ const Aurora = () => {
       {aurora?.map((item) => (
         <div
           id="admin_bg"
-          className={`bg-white p-5 w-[100%] h-[100%] lg:w-[300px] md:w-[300px] lg:h-[395px] md:h-[395px] overflow-y-scroll`}
+          className={`bg-white p-5 w-[100%] h-[100%] lg:w-[350px] md:w-[350px] lg:h-[395px] md:h-[395px] overflow-y-scroll`}
         >
           <h1 className="text-gray font-[800] text-3xl mb-3">
             {item.mainTitle}

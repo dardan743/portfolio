@@ -40,7 +40,7 @@ const Navigation = () => {
         </div>
         <input
           value={keyword}
-          className="keyword_input bg-[#eee] border-2 border-[#eee] p-2 w-[40%] rounded-2xl mt-2"
+          className="keyword_input bg-[#eee] border-2 border-[#eee] p-2 w-[100%] lg:w-[40%] md:w-[40%] rounded-2xl mt-2"
           placeholder="Password"
           type="text"
           onChange={(e) => dispatch(changeKeyword(e.target.value))}

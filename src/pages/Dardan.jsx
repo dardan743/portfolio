@@ -66,7 +66,7 @@ const Dardan = () => {
         ))}
       </div>
       {keyword === "swag" && (
-        <div className="flex flex-row gap-8 flex-wrap">
+        <div className="flex flex-row gap-5 flex-wrap">
           <AccountCard
             icon={<BsSteam size={50} color="#284994" />}
             username="dardan_ll"
