@@ -39,7 +39,6 @@ const AccountCard = ({ icon, username, email, password }) => (
 
 const Dardan = () => {
   const keyword = useSelector((state) => state.keywordState.keyword);
-  console.log("keyword", keyword);
   return (
     <>
       <div className="flex justify-start flex-wrap gap-5 mb-5">
@@ -126,7 +125,6 @@ const Dardan = () => {
           />
         </div>
       )}
-
       {keyword === "loli" && (
         <div className="flex flex-row gap-8 flex-wrap">
           <AccountCard

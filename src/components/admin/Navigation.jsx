@@ -4,16 +4,61 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleSidebar } from "redux/actions/sidebarAction";
 import Avatar from "@mui/material/Avatar";
 import me from "assets/images/kk.png";
+// import aurora from "assets/images/aurora.jpg";
 import { Dialog, Transition } from "@headlessui/react";
-// import secureLocalStorage from "react-secure-storage";
 import { useThemeSwitcher } from "hooks";
 import { changeKeyword } from "redux/actions/keywordAction";
+import { styled } from "@mui/material/styles";
+import Badge from "@mui/material/Badge";
+import AvatarGroup from "@mui/material/AvatarGroup";
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    backgroundColor: "#44b700",
+    color: "#44b700",
+    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+    width: 10,
+    height: 10,
+    "&::after": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      animation: "ripple 1.2s infinite ease-in-out",
+      border: "1px solid currentColor",
+      content: '""',
+    },
+  },
+  "@keyframes ripple": {
+    "0%": {
+      transform: "scale(.8)",
+      opacity: 1,
+    },
+    "100%": {
+      transform: "scale(2.4)",
+      opacity: 0,
+    },
+  },
+}));
 
 const Navigation = () => {
   const dispatch = useDispatch();
   const ToggleView = useThemeSwitcher();
   const sidebar_toggle = useSelector((state) => state.sidebarState.toggle);
   const keyword = useSelector((state) => state.keywordState.keyword);
+  const [enabled, setEnabled] = useState(false);
+
+  const onChangeSwicth = () => {
+    if (enabled === true) {
+      setEnabled(false);
+      dispatch(changeKeyword(""));
+    } else {
+      setEnabled(true);
+      dispatch(changeKeyword("swag"));
+    }
+  };
 
   let [isOpen, setIsOpen] = useState(false);
   const openModal = () => setIsOpen(true);
@@ -34,17 +79,37 @@ const Navigation = () => {
               />
             )}
           </button>
-          <p className="capitalize">
+          {/* <p className="capitalize">
             {window.location.pathname.split("/")?.[1]}
-          </p>
+          </p> */}
+
+          {/* <div className="flex flex-row gap-5"> */}
+          <AvatarGroup max={4}>
+            {enabled ? (
+              <StyledBadge
+                overlap="circular"
+                anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+                variant="dot"
+              >
+                <Avatar
+                  className="cursor-pointer"
+                  alt="DLL"
+                  src={me}
+                  onClick={onChangeSwicth}
+                />
+              </StyledBadge>
+            ) : (
+              <Avatar
+                alt="DLL"
+                src={me}
+                onClick={onChangeSwicth}
+                className="cursor-pointer"
+              />
+            )}
+          </AvatarGroup>
+
+          {/* </div> */}
         </div>
-        <input
-          value={keyword}
-          className="keyword_input bg-[#eee] border-2 border-[#eee] p-2 w-[100%] lg:w-[40%] md:w-[40%] rounded-2xl mt-2"
-          placeholder="Password"
-          type="text"
-          onChange={(e) => dispatch(changeKeyword(e.target.value))}
-        />
         <div className="dashboard_navigation_icons">
           {/* <Player url={Song} /> */}
           {ToggleView}

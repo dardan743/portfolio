@@ -14,7 +14,7 @@ const TooltipCustom = styled(({ className, ...props }) => (
     fontSize: theme.typography.pxToRem(14),
     border: "2px solid #ff4141",
     maxWidth: 220,
-    fontFamily: "poppins",
+    fontFamily: "Poppins",
     color: "#000",
     padding: "7px",
   },
